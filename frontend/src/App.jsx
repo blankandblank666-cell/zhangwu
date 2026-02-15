@@ -37,7 +37,7 @@ function App() {
             key="preloader"
             initial={{ y: 0 }} 
             exit={{ y: "-100%", transition: { duration: 1, ease: [0.76, 0, 0.24, 1] } }}
-            className="fixed inset-0 z-[9999] bg-[#001529] flex items-center justify-center text-white"
+            className="fixed inset-0 z-[9999] bg-[#001529] flex items-center justify-center text-white min-h-[100svh]"
           >
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center">
             <h2 className="text-6xl md:text-9xl font-serif italic tracking-widest mb-8 font-black">
@@ -45,7 +45,7 @@ function App() {
                <div className="w-16 h-[1px] bg-white/30 mx-auto overflow-hidden">
                 <motion.div className="w-full h-full bg-white" initial={{ x: "-100%" }} animate={{ x: "0%" }} transition={{ duration: 1.5 }} />
               </div>
-              <p className="mt-4 text-xs tracking-[0.3em] opacity-70"><h5>大工 × 彰武</h5></p>
+              <div className="mt-4 text-xs tracking-[0.3em] opacity-70">大工 × 彰武</div>
             </motion.div>
           </motion.div>
         )}

@@ -14,7 +14,7 @@ const PersonDetail = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-white pb-20">
-       <div className="max-w-4xl mx-auto px-6">
+       <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <button onClick={() => navigate(-1)} className="mb-8 text-gray-500 hover:text-black flex items-center gap-2">
              <ArrowLeftOutlined /> 返回列表
           </button>
@@ -25,16 +25,16 @@ const PersonDetail = () => {
                 <div className="flex gap-2 mb-3">
                    {person.tags.map(tag => <span key={tag} className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-bold">{tag}</span>)}
                 </div>
-                <h1 className="text-5xl font-serif font-bold mb-2">{person.name}</h1>
-                <p className="text-xl text-gray-500 mb-6">{person.title}</p>
-                <div className="border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50 italic text-gray-700">
+                <h1 className="text-3xl md:text-5xl font-serif font-bold mb-2">{person.name}</h1>
+                <p className="text-lg md:text-xl text-gray-500 mb-6">{person.title}</p>
+                <div className="border-l-4 border-yellow-500 pl-4 py-3 bg-yellow-50 italic text-gray-700 text-base md:text-lg leading-relaxed">
                    {person.quote}
                 </div>
              </div>
           </div>
 
-          <div className="mt-16 prose prose-lg max-w-none text-gray-600 leading-loose">
-             <h3 className="text-2xl font-bold text-black mb-6">人物事迹</h3>
+          <div className="mt-16 max-w-none text-gray-700 leading-[2] [&>p]:mb-8 [&>p]:text-[1rem] md:[&>p]:text-[1.2rem]">
+             <h3 className="text-3xl md:text-4xl font-bold text-black mb-8">人物事迹</h3>
              {/* 渲染 HTML 内容 */}
              <div dangerouslySetInnerHTML={{ __html: person.content }} />
           </div>

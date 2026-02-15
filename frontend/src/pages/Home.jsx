@@ -12,7 +12,7 @@ const Home = () => {
     <div className="bg-white">
       
       {/* === 1. Hero 首屏展示 === */}
-      <header className="relative h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+      <header className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
         <motion.div 
           initial={{ scale: 1.1 }} 
           animate={{ scale: 1 }} 
@@ -46,11 +46,11 @@ const Home = () => {
               </div>
               {/* =================================== */}
               
-              <div className="flex justify-center gap-6 mt-8">
-                 <Link to="/spirit" className="px-8 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors flex items-center gap-2">
+              <div className="flex justify-center gap-3 md:gap-6 mt-8 flex-wrap">
+                 <Link to="/spirit" className="px-5 md:px-8 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors flex items-center gap-2">
                     探索治沙精神 <ArrowRightOutlined />
                  </Link>
-                 <button className="px-8 py-3 text-white border border-white/30 rounded-full font-medium hover:bg-white/10 backdrop-blur-sm transition-colors flex items-center gap-2">
+                 <button className="px-5 md:px-8 py-3 text-white border border-white/30 rounded-full font-medium hover:bg-white/10 backdrop-blur-sm transition-colors flex items-center gap-2">
                     <PlayCircleOutlined /> 观看宣传片
                  </button>
               </div>

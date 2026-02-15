@@ -35,11 +35,11 @@ const Activity = () => {
             {activities.map((item) => (
                 <div 
                   key={item.id}
-                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden cursor-pointer flex flex-col h-[450px]"
+                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden cursor-pointer flex flex-col h-auto md:h-[450px]"
                   onClick={() => handleCardClick(item)}
                 >
                     {/* 图片区域 */}
-                    <div className="h-64 overflow-hidden relative">
+                    <div className="h-56 md:h-64 overflow-hidden relative">
                        <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={item.title}/>
                        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur text-slate-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                           {item.id === 'study' ? 'Interactive' : 'Event'}
@@ -47,7 +47,7 @@ const Activity = () => {
                     </div>
 
                     {/* 文字区域 */}
-                    <div className="p-8 flex-grow flex flex-col justify-between">
+                    <div className="p-6 md:p-8 flex-grow flex flex-col justify-between">
                        <div>
                          <h2 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-green-700 transition-colors">{item.title}</h2>
                          <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-4">{item.subtitle}</p>

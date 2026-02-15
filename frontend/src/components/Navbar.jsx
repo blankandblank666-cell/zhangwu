@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Dropdown } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
+import { Dropdown, Drawer } from 'antd';
+import { DownOutlined, MenuOutlined } from '@ant-design/icons';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -17,6 +18,11 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // 路由变化后自动关闭移动端抽屉，避免页面跳转后菜单残留
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname, location.search]);
 
   // === 3. 样式逻辑 ===
   const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
@@ -80,7 +86,7 @@ const Navbar = () => {
 
   return (
     <nav className={navClass}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
@@ -90,10 +96,10 @@ const Navbar = () => {
              alt="Logo"
            />
            <div className={`flex flex-col transition-colors duration-300 ${textColor}`}>
-             <span className="font-serif font-bold text-lg leading-none tracking-widest group-hover:text-green-600 transition-colors">
+             <span className="font-serif font-bold text-base sm:text-lg leading-none tracking-widest group-hover:text-green-600 transition-colors">
                “瀚海筑梦”实践团
              </span>
-             <span className="text-[10px] opacity-80 uppercase tracking-wider mt-1">
+             <span className="text-[10px] opacity-80 uppercase tracking-wider mt-1 hidden sm:block">
                大连理工大学
              </span>
            </div>
@@ -106,7 +112,10 @@ const Navbar = () => {
           </Link>
 
           <Dropdown menu={spiritMenu} placement="bottom" arrow={{ pointAtCenter: true }}>
-             <button className={`${linkClass} ${isActive('/spirit')}`}>
+             <button
+                className={`${linkClass} ${isActive('/spirit')}`}
+                onClick={() => navigate('/spirit?tab=history')}
+             >
                 治沙精神 <DownOutlined className="text-[10px] opacity-60 ml-1"/>
              </button>
           </Dropdown>
@@ -144,7 +153,64 @@ const Navbar = () => {
              <span className="font-serif font-bold text-xs">CN</span>
           </div> */}
         </div>
+
+        {/* 移动端菜单按钮 */}
+        <button
+          className={`md:hidden w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
+            isScrolled || !isHome
+              ? 'bg-slate-900/5 text-slate-800 hover:bg-slate-900/10'
+              : 'bg-white/15 text-white hover:bg-white/25 backdrop-blur-sm'
+          }`}
+          onClick={() => setMobileOpen(true)}
+          aria-label="打开菜单"
+        >
+          <MenuOutlined />
+        </button>
       </div>
+
+      <Drawer
+        title="站点导航"
+        placement="right"
+        width={300}
+        onClose={() => setMobileOpen(false)}
+        open={mobileOpen}
+      >
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/')}>首页</button>
+            <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/about')}>关于我们</button>
+            <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/industry')}>彰武产业总览</button>
+            <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/activity')}>彰武活动总览</button>
+          </div>
+
+          <div>
+            <p className="text-xs uppercase tracking-wider text-slate-400 mb-2 px-1">治沙精神</p>
+            <div className="space-y-2">
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 hover:text-green-700" onClick={() => navigate('/spirit?tab=history')}>治沙历史</button>
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 hover:text-green-700" onClick={() => navigate('/spirit?tab=people')}>杰出代表</button>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs uppercase tracking-wider text-slate-400 mb-2 px-1">彰武产业</p>
+            <div className="space-y-2">
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/industry/primary')}>精品农业</button>
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/industry/secondary')}>硅砂工业</button>
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/industry/tertiary')}>全域旅游</button>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs uppercase tracking-wider text-slate-400 mb-2 px-1">彰武活动</p>
+            <div className="space-y-2">
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/activity/study')}>研学活动</button>
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/activity/tree')}>一棵树活动</button>
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/activity/show')}>表演预约</button>
+              <button className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100" onClick={() => navigate('/activity/video')}>短视频大赛</button>
+            </div>
+          </div>
+        </div>
+      </Drawer>
     </nav>
   );
 };
