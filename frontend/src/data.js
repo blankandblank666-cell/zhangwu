@@ -807,118 +807,196 @@ export const database = {
       ]
     },
   tours: [
-      { 
-        id: "zhanggutai", 
-        name: "章古台林场", 
-        x: 68, y: 25, // 坐标还是需要的，画地图用
-        type: "林海", 
-        img: "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=800", 
-        desc: "万亩松林核心区，治沙精神发源地",
-        // 下面是详情页专用的长内容
-        intro: "这里是彰武治沙的起点，拥有亚洲最大的人工樟子松林。置身其中，听松涛阵阵，感悟一代代治沙人与天斗、与地斗的英雄气概。",
-        features: ["万亩松林", "瞭望塔", "治沙纪念馆"],
+      {
+        id: "zhanggutai",
+        name: "章古台林场",
+        x: 66, y: 22,
+        type: "林海",
+        img: "/image/activity/spot-zhanggutai.jpg",
+        gallery: [
+          "/image/activity/spot-zhanggutai.jpg",
+          "/image/activity/data-jpg-001.jpg",
+          "/image/activity/data-jpg-002.jpg"
+        ],
+        desc: "全国防沙治沙示范林场，治沙科技研学核心点位。",
+        intro: "章古台林场始建于1958年，总面积8.01万亩，森林覆盖率从建场初期不足5%提升至87%，活立木蓄积量达17.6万立方米。林场下设塘坊、清泉、中窑、清沟4个管理工区，构建了“阻风-固沙-改良土壤”三阶生态链，成功阻断科尔沁沙地南侵。这里还建有30亩小型植物园，已成为阜新市彰武治沙学校现场教学点之一。",
+        features: ["8.01万亩林场", "森林覆盖率87%", "30亩植物园", "四大工区生态链"],
         itinerary: [
-          { time: "09:00", activity: "抵达林场，参观治沙精神纪念馆" },
-          { time: "10:30", activity: "徒步松林栈道，登瞭望塔俯瞰绿洲" },
-          { time: "12:00", activity: "品尝林场特色农家饭" }
+          { time: "09:00", activity: "抵达章古台林场，了解“阻风-固沙-改良土壤”三阶生态链。" },
+          { time: "10:30", activity: "参观30亩小型植物园，学习“乔灌草结合、针阔混交”治理模式。" },
+          { time: "12:00", activity: "现场研讨樟子松嫁接红松等科技创新案例。" }
         ]
       },
-      { 
-        id: "daleng", 
-        name: "大冷乡", 
-        x: 42, y: 35, 
-        type: "草原", 
-        img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800", 
-        desc: "漠上草原风景区，体验独特沙地风情",
-        intro: "大冷乡拥有独特的沙地草原地貌，牛羊成群，风吹草低。这里不仅能看到从前的沙地遗迹，更能看到生态恢复后的勃勃生机。",
-        features: ["草原骑马", "蒙古包体验", "篝火晚会"],
+      {
+        id: "daleng",
+        name: "大冷蒙古族镇",
+        x: 41, y: 34,
+        type: "草原",
+        img: "/image/activity/spot-daleng.jpg",
+        gallery: [
+          "/image/activity/spot-daleng.jpg",
+          "/image/activity/data-jpg-013.jpg",
+          "/image/activity/data-jpg-014.jpg"
+        ],
+        desc: "草原生态恢复示范区，“沙窝子”变“鱼米乡”的典型点位。",
+        intro: "大冷蒙古族镇是彰武县百万亩草原生态恢复工程核心区域。通过实施乔灌草综合治理，植被覆盖度由治理前不足20%提高到80%以上。柳河生态综合治理工程水田湿地项目在此实施，形成50余平方公里湿地，成为“以水含沙”模式的重要实践区域。",
+        features: ["植被覆盖度超80%", "50余平方公里湿地", "以水含沙模式", "稻蟹立体养殖"],
         itinerary: [
-          { time: "14:00", activity: "草原漫步，体验骑马射箭" },
-          { time: "16:00", activity: "走访牧民家庭，了解生态养殖" },
-          { time: "19:00", activity: "参加草原篝火晚会" }
+          { time: "13:30", activity: "走进草原生态恢复示范区，观察乔灌草综合治理成效。" },
+          { time: "15:00", activity: "实地学习“以水含沙”工程和水田湿地建设经验。" },
+          { time: "16:30", activity: "了解稻蟹立体养殖等生态农业技术。"}
         ]
       },
-      { 
-        id: "zhangwutown", 
-        name: "彰武镇", 
-        x: 55, y: 70, 
-        type: "人文", 
-        img: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=800", 
-        desc: "县政府所在地，历史与现代交融",
-        intro: "作为全县的政治经济中心，彰武镇见证了这座城市的变迁。这里有热闹的市集、完善的设施，是研学旅行的最佳中转站。",
-        features: ["城市漫步", "特色美食", "历史建筑"],
+      {
+        id: "liuhe",
+        name: "柳河湿地",
+        x: 30, y: 56,
+        type: "湿地",
+        img: "/image/activity/spot-liuhe.jpg",
+        gallery: [
+          "/image/activity/spot-liuhe.jpg",
+          "/image/activity/data-jpg-017.jpg",
+          "/image/activity/data-jpg-018.jpg"
+        ],
+        desc: "“北方小黄河”治理样本，漠上湿地生态研学点。",
+        intro: "柳河素有“北方小黄河”之称，全国河流含沙量排名第二。通过修建70余公里堤防生态带、建设5万亩水田湿地，形成“漠上湿地”景观。2025年“柳河鸿雁”观鸟季吸引摄影爱好者和游人约10万人次，是湿地生态观察与环境治理教学的重要点位。",
+        features: ["70余公里堤防生态带", "5万亩水田湿地", "柳河鸿雁观鸟季", "白砂湾漂流5公里"],
         itinerary: [
-          { time: "全天", activity: "游览县城，品尝彰武地瓜、烘糕等特产" }
+          { time: "09:30", activity: "开展湿地生态系统观察，了解柳河综合治理逻辑。" },
+          { time: "11:00", activity: "观鸟摄影与季节性生态记录。" },
+          { time: "14:00", activity: "体验白砂湾漂流项目（全程约5公里，约1.5小时）。" }
         ]
       },
-      { 
-        id: "liuhe", 
-        name: "柳河湿地", 
-        x: 30, y: 55, 
-        type: "湿地", 
-        img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800", 
-        desc: "候鸟迁徙停歇地，生态摄影天堂",
-        intro: "柳河蜿蜒流淌，形成了大片的湿地生态系统。每年春秋两季，成千上万的候鸟在此停歇，是摄影爱好者和自然观察者的天堂。",
-        features: ["观鸟拍摄", "湿地科普", "日落景观"],
+      {
+        id: "oulishan",
+        name: "欧李山观景台",
+        x: 54, y: 41,
+        type: "观景",
+        img: "/image/activity/spot-oulishan.jpg",
+        gallery: [
+          "/image/activity/spot-oulishan.jpg",
+          "/image/activity/data-jpg-010.jpg",
+          "/image/activity/data-jpg-012.jpg"
+        ],
+        desc: "“一山观四湖”的漠上草原全景点。",
+        intro: "欧李山观景台是“饱览绿色长城、传承治沙精神”精品研学路线的重要节点，可整体观察区域草原、林地与湿地的空间格局，帮助理解彰武生态修复由点到面的系统治理方式。",
+        features: ["一山观四湖", "草原全景", "生态格局观察", "路线中枢节点"],
         itinerary: [
-          { time: "16:00", activity: "抵达湿地公园，进行鸟类观察" },
-          { time: "17:30", activity: "拍摄柳河日落壮美景色" }
+          { time: "10:00", activity: "登观景台进行区域地貌与生态格局解读。" },
+          { time: "11:00", activity: "开展研学拍摄与路线任务打卡。" }
         ]
       },
+      {
+        id: "deliger",
+        name: "德力格尔风景区",
+        x: 58, y: 30,
+        type: "文旅",
+        img: "/image/activity/spot-deliger.jpg",
+        gallery: [
+          "/image/activity/spot-deliger.jpg",
+          "/image/activity/data-jpg-015.jpg",
+          "/image/activity/data-jpg-016.jpg"
+        ],
+        desc: "国家3A级景区，蒙古族文化体验与表演预约核心场景。",
+        intro: "德力格尔风景区占地约4000亩，设有漠上营地、蒙古人家、皇家马场等景观，提供烤全羊、手把肉等蒙餐体验，并可承接安代舞、马头琴等民族文化表演活动，是研学团和旅游团进行文化体验与定制化演出的重要承接地。",
+        features: ["国家3A级景区", "占地4000亩", "蒙古大营与马场", "可定制民族表演"],
+        itinerary: [
+          { time: "14:00", activity: "景区导览，认识“草原+森林+沙地”复合景观。" },
+          { time: "16:00", activity: "参与蒙古族文化体验（马头琴、安代舞等）。" },
+          { time: "18:00", activity: "用餐与夜间互动活动（可衔接篝火晚会）。" }
+        ]
+      }
     ],
     activities: [
       {
-        id: "study", // 对应之前的研学路线
+        id: "study",
         title: "研学活动 · 探索之旅",
         subtitle: "Study Tour",
-        summary: "交互式地图导览，探索章古台林场、大冷草原等核心研学基地。",
-        img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1000",
+        summary: "围绕章古台林场、大冷蒙古族镇、柳河湿地、欧李山观景台与德力格尔风景区，构建“饱览绿色长城、传承治沙精神”精品路线。",
+        img: "/image/activity/study-hero.jpg",
         color: "green",
-        type: "interactive", // 标记这个是特殊交互页
+        type: "interactive",
+        gallery: [
+          "/image/activity/study-hero.jpg",
+          "/image/activity/spot-zhanggutai.jpg",
+          "/image/activity/spot-daleng.jpg",
+          "/image/activity/spot-liuhe.jpg",
+          "/image/activity/spot-oulishan.jpg",
+          "/image/activity/spot-deliger.jpg"
+        ]
       },
       {
         id: "tree",
         title: "一棵树 · 认养计划",
         subtitle: "Adopt A Tree Campaign",
-        summary: "我在彰武有棵树。参与公益认养，为沙漠增添一抹新绿。",
-        img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000",
+        summary: "结合“辽宁营商林”和碳中和林实践，推动“认养一棵树、营造一片林”参与式治沙行动。",
+        img: "/image/activity/tree-hero.jpg",
         color: "green",
+        gallery: [
+          "/image/activity/tree-hero.jpg",
+          "/image/activity/tree-gallery-1.jpg",
+          "/image/activity/tree-gallery-2.jpg",
+          "/image/activity/data-jpg-002.jpg",
+          "/image/activity/data-jpg-006.jpg"
+        ],
         content: `
-          <p>“一棵树”公益活动旨在号召社会各界人士参与到彰武的防沙治沙事业中来。</p>
-          <h3>活动意义</h3>
-          <p>每一棵被认养的树，都会挂上认养人的专属铭牌。这不仅是一份爱心的见证，更是对“守绿传薪”精神的传承。</p>
-          <h3>参与方式</h3>
-          <p>个人或团体均可报名。认养费用将全部用于树苗采购与后期管护。您将获得电子认养证书，并定期收到树木成长的照片。</p>
+          <p>页面位置：彰武活动 → 一棵树活动。</p>
+          <h3>活动背景与意义</h3>
+          <p>2024年4月，辽宁省数据局（省营商局）组织全省数据（营商）系统220余名党员干部在彰武县大德镇福巨昌村开展“弘扬治沙精神，贡献营商力量”春季造林活动，启动“辽宁营商林”项目。累计1222人参与，共种下元宝枫树苗3000余棵，植树面积约50亩。</p>
+          <p>2022年，辽宁省第一片碳中和林在彰武县章古台镇种下，共栽种彰武松、油松等树种1万余株，累计可中和二氧化碳排放量超过6000吨。</p>
+          <h3>认养树种建议</h3>
+          <p>樟子松：1955年成功营造新中国第一片樟子松引种固沙林，现已成为“三北”地区防风固沙主力树种。<br/>彰武松：1990年代发现的新树种（赤松与油松天然杂交种），具备速生、抗旱、抗寒、耐盐碱等特性。<br/>元宝枫：2024年“辽宁营商林”主要栽种树种，兼具生态与经济价值。</p>
+          <h3>认养权益</h3>
+          <p>专属铭牌悬挂、电子认养证书、成长影像记录、治沙精神传承活动参与。</p>
         `
       },
       {
         id: "show",
         title: "表演预约 · 民族风情",
         subtitle: "Cultural Performance Booking",
-        summary: "预约马头琴演奏、蒙古族歌舞，体验浓郁的科尔沁文化。",
-        img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1000", // 建议换成舞蹈/乐器图
+        summary: "依托蒙古勒津马头琴音乐、东蒙短调民歌等非遗资源，提供可定制民族表演预约服务。",
+        img: "/image/activity/show-hero.jpg",
         color: "orange",
+        gallery: [
+          "/image/activity/show-hero.jpg",
+          "/image/activity/show-gallery-1.jpg",
+          "/image/activity/show-gallery-2.jpg",
+          "/image/activity/data-jpg-015.jpg"
+        ],
         content: `
-          <p>在漠上草原，您可以欣赏到最地道的蒙古族传统艺术表演。</p>
-          <h3>节目单</h3>
-          <p>1. 马头琴独奏《万马奔腾》<br/>2. 蒙古族长调<br/>3. 顶碗舞<br/>4. 篝火晚会互动</p>
-          <h3>预约说明</h3>
-          <p>表演需提前 3 天预约，适合 20 人以上的研学团或旅游团。支持定制化节目编排。</p>
+          <p>页面位置：彰武活动 → 表演预约。</p>
+          <h3>蒙古族文化资源</h3>
+          <p>蒙古勒津马头琴音乐为国家级非遗项目，可演奏《万马奔腾》等经典曲目；阜新东蒙短调民歌同为国家级非遗；安代舞、顶碗舞为科尔沁文化代表性舞蹈形式。</p>
+          <h3>预约服务场景</h3>
+          <p>德力格尔风景区蒙古大营可承接马头琴、安代舞等文化体验活动。适合20人以上研学团或旅游团，建议提前3天预约，可按团队需求定制节目编排（如增加篝火晚会互动环节）。</p>
+          <h3>地方活动补充</h3>
+          <p>后新秋镇定期举办“端午粽飘香 文化润万家”等主题活动，融合呼麦、长调、马头琴与民族舞蹈，适合研学团体联动参与。</p>
         `
       },
       {
         id: "video",
         title: "短视频大赛 · 影像彰武",
         subtitle: "Short Video Contest",
-        summary: "用镜头记录治沙奇迹，百万流量扶持，赢取丰厚奖金。",
-        img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000",
+        summary: "围绕“治沙精神、生态美景、乡村振兴”三大主题，打造“印象彰武”短视频创作活动。",
+        img: "/image/activity/video-hero.jpg",
         color: "blue",
+        gallery: [
+          "/image/activity/video-hero.jpg",
+          "/image/activity/video-gallery-1.jpg",
+          "/image/activity/video-gallery-2.jpg",
+          "/image/activity/data-jpg-014.jpg"
+        ],
         content: `
-          <p>为庆祝彰武治沙 70 周年，特举办“印象彰武”短视频大赛。</p>
-          <h3>参赛主题</h3>
-          <p>围绕“治沙精神”、“生态美景”、“乡村振兴”三大主题进行创作。风格不限，Vlog、纪录片、剧情片均可。</p>
-          <h3>奖项设置</h3>
-          <p>一等奖（1名）：奖金 10000 元 + 证书<br/>二等奖（3名）：奖金 5000 元 + 证书<br/>三等奖（10名）：彰武特产大礼包</p>
+          <p>页面位置：彰武活动 → 短视频大赛。</p>
+          <h3>主题一：治沙精神</h3>
+          <p>聚焦彰武70年科学治沙历程，展示“矢志不移、永不退缩、默默无闻、甘于奉献”的精神内核。可拍摄章古台林场、辽宁省农业科学院沙地治理与利用研究所章古台基地等地标。</p>
+          <p>相关数据：沙化土地面积占比由20世纪50年代初的96%降至36.56%，扬沙天气由1953年的43天下降到近十年每年平均5天。</p>
+          <h3>主题二：生态美景</h3>
+          <p>拍摄德力格尔草原、欧李山观景台、柳河湿地、巨龙湖等景观。文档引用数据：德力格尔风景区2022年游客接待量30万人次，今年上半年彰武全域接待旅游人数70万人次。</p>
+          <h3>主题三：乡村振兴</h3>
+          <p>记录“以水含沙”工程成效。文档引用数据：柳河沿岸1225户3907口人受益，农民人均增收1000元以上。</p>
+          <h3>奖项设置（文档建议）</h3>
+          <p>一等奖（1名）：10000元 + 证书；二等奖（3名）：5000元 + 证书；三等奖（10名）：彰武特产大礼包。<br/>注：文档对该奖项标注“根据网站内容设计，可信度待核验”。</p>
         `
       }
     ]
