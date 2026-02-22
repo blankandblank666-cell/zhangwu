@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { database } from '../data';
 import { motion } from 'framer-motion';
 import { UserOutlined, ClockCircleOutlined, TeamOutlined } from '@ant-design/icons';
@@ -7,6 +7,38 @@ const About = () => {
   const { team } = database;
   // 手风琴状态：默认选中第一个人 (id: 1)
   const [activeMember, setActiveMember] = useState(1);
+  const activityCount = team?.activities?.length || 0;
+  const timelineCurve = useMemo(() => {
+    if (activityCount <= 1) return 'M 50 4 L 50 96';
+    const step = 92 / (activityCount - 1);
+    const points = Array.from({ length: activityCount }, (_, idx) => {
+      const t = activityCount === 1 ? 0 : idx / (activityCount - 1);
+      const envelope = Math.pow(Math.sin(Math.PI * t), 0.9); // 首尾收敛，避免起止拐点突兀
+      const sway = Math.sin(Math.PI * 3.2 * t) * 0.72 + Math.sin(Math.PI * 6.4 * t) * 0.28;
+      return {
+        x: 50 + 13 * envelope * sway,
+        y: 4 + step * idx
+      };
+    });
+
+    let path = `M ${points[0].x} ${points[0].y}`;
+    const tension = 0.26;
+
+    for (let i = 0; i < points.length - 1; i += 1) {
+      const p0 = points[i - 1] || points[i];
+      const p1 = points[i];
+      const p2 = points[i + 1];
+      const p3 = points[i + 2] || points[i + 1];
+
+      const cp1x = p1.x + (p2.x - p0.x) * tension;
+      const cp1y = p1.y + (p2.y - p0.y) * tension;
+      const cp2x = p2.x - (p3.x - p1.x) * tension;
+      const cp2y = p2.y - (p3.y - p1.y) * tension;
+
+      path += ` C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${p2.x} ${p2.y}`;
+    }
+    return path;
+  }, [activityCount]);
 
   // 兜底防止数据为空
   if (!team) return <div>Loading...</div>;
@@ -122,33 +154,51 @@ const About = () => {
             <p className="text-gray-400 uppercase tracking-widest text-xs">Past Activities</p>
          </div>
 
-         <div className="space-y-12">
-            {team.activities.map((item, index) => (
-               <motion.div 
-                 key={index}
-                 initial={{ opacity: 0, y: 30 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ delay: index * 0.2 }}
-                 className={`flex flex-col md:flex-row gap-8 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
-               >
-                  {/* 图片部分 */}
-                  <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-xl group">
-                     <img src={item.img} className="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700" alt={item.title} />
-                  </div>
+         <div className="relative">
+            <div className="hidden md:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[34%] pointer-events-none z-20">
+               <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                     <linearGradient id="dreamTrailGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="rgba(255,255,255,0.82)" />
+                        <stop offset="52%" stopColor="rgba(34,197,94,0.82)" />
+                        <stop offset="100%" stopColor="rgba(255,255,255,0.78)" />
+                     </linearGradient>
+                  </defs>
+                  <path d={timelineCurve} fill="none" stroke="url(#dreamTrailGradient)" strokeWidth="1.05" strokeLinecap="round" />
+               </svg>
+            </div>
 
-                  {/* 文字部分 */}
-                  <div className="w-full md:w-1/2 text-center md:text-left">
-                     <div className="flex items-center justify-center md:justify-start gap-2 text-green-600 font-bold mb-2">
-                        <ClockCircleOutlined /> <span>{item.date}</span>
-                     </div>
-                     <h3 className="text-2xl font-bold text-slate-900 mb-4">{item.title}</h3>
-                     <p className="text-gray-500 leading-relaxed text-lg">
-                        {item.desc}
-                     </p>
-                  </div>
-               </motion.div>
-            ))}
+            <div className="space-y-8 md:space-y-12">
+               {team.activities.map((item, index) => (
+                  <motion.article
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15 }}
+                    className="relative min-h-[unset] md:min-h-[340px] flex items-center"
+                  >
+                    <span className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white border-[3px] border-green-600 shadow-[0_0_0_6px_rgba(34,197,94,0.15)] z-30" />
+
+                    <div className={`relative z-10 w-full md:w-[40%] ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
+                      <div className="bg-white rounded-2xl border border-green-100 shadow-[0_18px_38px_rgba(15,23,42,0.09)] overflow-hidden group">
+                        <div className="overflow-hidden">
+                           <img src={item.img} className="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-700" alt={item.title} />
+                        </div>
+                        <div className="p-5 md:p-6">
+                           <div className="flex items-center gap-2 text-green-700 font-bold mb-2 text-sm md:text-base">
+                              <ClockCircleOutlined /> <span>{item.date}</span>
+                           </div>
+                           <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                           <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+                              {item.desc}
+                           </p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.article>
+               ))}
+            </div>
          </div>
 
          {/* 底部结语 */}

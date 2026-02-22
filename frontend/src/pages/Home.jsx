@@ -1,6 +1,6 @@
-import React from 'react'; // 删掉了 useState, useEffect，因为首页不需要自己控制加载了
+import React from 'react'; 
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion'; // 删掉了 AnimatePresence
+import { motion } from 'framer-motion'; 
 import { ArrowRightOutlined, PlayCircleOutlined } from '@ant-design/icons';
 
 const bgImage = "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop";
@@ -11,7 +11,6 @@ const HOT_NEWS_LINKS = {
 };
 
 const Home = () => {
-  // 注意：这里已经没有 loading 状态和 useEffect 了，因为全交给 App.jsx 处理了
 
   return (
     <div className="bg-white">
@@ -73,7 +72,7 @@ const Home = () => {
          <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
                 <div className="p-4">
-                    <div className="text-5xl font-serif text-slate-900 font-bold mb-2">31.47%</div>
+                    <div className="text-5xl font-serif text-slate-900 font-bold mb-2">35.1%</div>
                     <div className="text-gray-500 uppercase tracking-widest text-xs">森林覆盖率 </div>
                 </div>
                 <div className="p-4">

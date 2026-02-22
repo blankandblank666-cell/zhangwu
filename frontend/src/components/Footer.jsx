@@ -41,7 +41,7 @@ const Footer = () => {
               <ul className="space-y-3 text-sm">
                 <li><Link to="/spirit" className="hover:text-green-400 transition-colors flex items-center gap-2"><ArrowRightOutlined className="text-xs opacity-50"/> 治沙精神</Link></li>
                 <li><Link to="/industry" className="hover:text-green-400 transition-colors flex items-center gap-2"><ArrowRightOutlined className="text-xs opacity-50"/> 绿色产业</Link></li>
-                <li><Link to="/tours" className="hover:text-green-400 transition-colors flex items-center gap-2"><ArrowRightOutlined className="text-xs opacity-50"/> 研学路线</Link></li>
+                <li><Link to="/activity/study" className="hover:text-green-400 transition-colors flex items-center gap-2"><ArrowRightOutlined className="text-xs opacity-50"/> 研学路线</Link></li>
               </ul>
             </div>
             <div>

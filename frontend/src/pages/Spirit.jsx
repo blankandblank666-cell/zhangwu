@@ -150,7 +150,7 @@ const BeforeAfterSlider = () => {
           decoding="async"
         />
         <div className="absolute bottom-3 right-4 md:bottom-4 md:right-6 text-white font-bold text-base md:text-xl drop-shadow-md z-0">
-          2025 林海
+          当今 林海
         </div>
 
         <img
@@ -165,7 +165,7 @@ const BeforeAfterSlider = () => {
           className="absolute bottom-3 left-4 md:bottom-4 md:left-6 text-white font-bold text-base md:text-xl drop-shadow-md z-10 transition-opacity duration-150"
           style={{ opacity: sliderPosition > 10 ? 1 : 0 }}
         >
-          1952 黄沙
+          过往 黄沙
         </div>
 
         <div
