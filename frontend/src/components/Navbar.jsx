@@ -14,8 +14,13 @@ const Navbar = () => {
 
   // 2. 监听滚动
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      const next = window.scrollY > 20;
+      setIsScrolled((prev) => (prev === next ? prev : next));
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

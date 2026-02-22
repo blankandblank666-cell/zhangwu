@@ -127,6 +127,72 @@ const SpiritHero = () => {
   );
 };
 
+const BeforeAfterSlider = () => {
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const desertImg = "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?q=80&w=1200";
+  const oasisImg = "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200";
+
+  return (
+    <div className="mt-6 md:mt-7">
+      <div className="text-center mb-4 md:mb-5">
+        <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900">历史印记 · 岁月见证</h3>
+        <p className="text-slate-600 mt-1 text-sm md:text-base">
+          左右拖动滑块，见证“死亡之海”到“生态绿洲”的蜕变
+        </p>
+      </div>
+
+      <div className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-2xl md:rounded-3xl shadow-xl select-none">
+        <img
+          src={oasisImg}
+          alt="治沙后"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="absolute bottom-3 right-4 md:bottom-4 md:right-6 text-white font-bold text-base md:text-xl drop-shadow-md z-0">
+          2025 林海
+        </div>
+
+        <img
+          src={desertImg}
+          alt="治沙前"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+          loading="lazy"
+          decoding="async"
+        />
+        <div
+          className="absolute bottom-3 left-4 md:bottom-4 md:left-6 text-white font-bold text-base md:text-xl drop-shadow-md z-10 transition-opacity duration-150"
+          style={{ opacity: sliderPosition > 10 ? 1 : 0 }}
+        >
+          1952 黄沙
+        </div>
+
+        <div
+          className="absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_10px_rgba(0,0,0,0.5)] pointer-events-none"
+          style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
+        >
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="#475569" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 15L4.5 12l3.75-3m7.5 6l3.75-3-3.75-3" />
+            </svg>
+          </div>
+        </div>
+
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value={sliderPosition}
+          onChange={(e) => setSliderPosition(Number(e.target.value))}
+          className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0"
+          aria-label="治沙前后对比滑块"
+        />
+      </div>
+    </div>
+  );
+};
+
 // === 3. 主页面组件 ===
 const Spirit = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -348,6 +414,7 @@ const Spirit = () => {
                         </li>
                       ))}
                     </ul>
+                    {point.year === '2005年' && <BeforeAfterSlider />}
                   </div>
                 </article>
               ))}

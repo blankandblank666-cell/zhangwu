@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { database } from '../data';
 import { ArrowLeftOutlined, CalendarOutlined } from '@ant-design/icons';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
 const creativeData = {
   tree: {
@@ -217,6 +217,7 @@ const CreativeSection = ({ itemId, activeTheme, setActiveTheme }) => {
 const ActivityDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const prefersReducedMotion = useReducedMotion();
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeTheme, setActiveTheme] = useState('spirit');
 
@@ -255,13 +256,13 @@ const ActivityDetail = () => {
       <div className="activity-detail-grain" />
 
       <div className="relative h-[420px] md:h-[500px] w-full overflow-hidden">
-        <img src={item.img} className="w-full h-full object-cover scale-[1.03]" alt={item.title} />
+        <img src={item.img} className="w-full h-full object-cover scale-[1.02]" alt={item.title} decoding="async" />
         <div className="absolute inset-0 bg-black/45" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
           <motion.h1
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
+            animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+            transition={prefersReducedMotion ? undefined : { duration: 0.5 }}
             className="text-3xl md:text-6xl font-serif font-bold mb-4"
           >
             {item.title}
@@ -270,14 +271,14 @@ const ActivityDetail = () => {
         </div>
         <button
           onClick={() => navigate('/activity')}
-          className="absolute top-24 left-6 md:left-12 text-white/80 hover:text-white flex items-center gap-2 transition-colors z-10 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm"
+          className="absolute top-24 left-6 md:left-12 text-white/80 hover:text-white flex items-center gap-2 transition-colors z-10 bg-black/35 px-4 py-2 rounded-full"
         >
           <ArrowLeftOutlined /> 返回活动总览
         </button>
       </div>
 
       <div className="max-w-6xl mx-auto px-6 -mt-16 relative z-10">
-        <div className="bg-white/92 backdrop-blur-[2px] rounded-3xl shadow-[0_18px_45px_rgba(15,23,42,0.16)] p-6 md:p-10 min-h-[400px] border border-white/70">
+        <div className="bg-white/94 rounded-3xl shadow-[0_18px_45px_rgba(15,23,42,0.14)] p-6 md:p-10 min-h-[400px] border border-white/70">
           <div className="flex flex-wrap justify-between items-center mb-6 gap-4">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs tracking-[0.16em] uppercase">
               Activity Brief
@@ -303,16 +304,17 @@ const ActivityDetail = () => {
 
             {gallery.length > 0 && (
               <motion.aside
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
+                whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+                viewport={prefersReducedMotion ? undefined : { once: true }}
                 className="space-y-3"
               >
                 <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)]">
                   <img
                     src={gallery[activeIndex]}
                     alt={`${item.title}-cover`}
-                    className="w-full h-56 md:h-72 object-cover transition-all duration-500"
+                    className="w-full h-56 md:h-72 object-cover"
+                    decoding="async"
                   />
                 </div>
                 <div className="grid grid-cols-3 gap-2">
@@ -332,6 +334,7 @@ const ActivityDetail = () => {
                         alt={`${item.title}-${idx + 1}`}
                         className="w-full h-20 object-cover"
                         loading="lazy"
+                        decoding="async"
                       />
                     </button>
                   ))}
