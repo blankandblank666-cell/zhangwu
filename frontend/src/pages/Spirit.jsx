@@ -224,12 +224,7 @@ const Spirit = () => {
         {
           year: "1950年",
           items: [
-            "王殿臣互助组扩大规模，又栽植120亩，成活率超90%"
-          ]
-        },
-        {
-          year: "1951年",
-          items: [
+            "王殿臣互助组扩大规模，又栽植120亩，成活率超90%",
             "王殿臣被评为辽西省劳动模范，其造林经验在全省推广"
           ]
         },
@@ -245,7 +240,9 @@ const Spirit = () => {
           items: [
             "春，科研人员从内蒙古呼伦贝尔红花尔基引进樟子松种子进行育苗试验，因冬季干旱风沙大，仅2株被沙埋的树苗幸存，为后续成功提供重要启示",
             "科研团队开始筛选固沙植物，最终选出小黄柳、差巴嘎蒿、胡枝子、小叶锦鸡儿、紫穗槐等五种耐风蚀沙埋的优良固沙灌木"
-          ]
+          ],
+          image: "/song.jpg",
+          imageAlt: "1953年樟子松与固沙科研相关影像"
         },
         {
           year: "1955年",
@@ -298,6 +295,15 @@ const Spirit = () => {
           ]
         },
         {
+          year: "1985年",
+          items: [
+            "全县累计出动干部群众120余万人次，手挖肩扛、马车运苗、往返数十里拉水浇苗，10年完成造林130余万亩"
+          ],
+          image: "/damo.jpg",
+          imageAlt: "1985年大漠治沙阶段影像",
+          imagePosition: "50% 34%"
+        },
+        {
           year: "1990年代",
           items: [
             "实施\"三北\"防护林二期、三期工程，累计完成治沙造林126.5万亩，封山育林23.8万亩，飞播造林17.2万亩",
@@ -335,7 +341,9 @@ const Spirit = () => {
           items: [
             "启动柳河综合治理项目（被誉为\"北方都江堰\"），通过修建堤防生态带、景观带和开发水田，形成50余平方公里湿地，让\"荒沙窝子\"变成\"鱼米之乡\"",
             "探索\"以树挡沙、以草固沙、以水含沙、以光锁沙\"的四维治沙新模式，实现生态修复与经济发展双赢"
-          ]
+          ],
+          image: "/liuhe.jpg",
+          imageAlt: "柳河综合治理项目影像"
         },
         {
           year: "2021年",
@@ -394,6 +402,19 @@ const Spirit = () => {
             </div>
 
             <div className="space-y-6">
+              {section.sectionImage && (
+                <div className="ml-[94px] md:ml-[244px] mb-2">
+                  <div className="overflow-hidden rounded-2xl border border-green-900/10 bg-white shadow-sm">
+                    <img
+                      src={section.sectionImage}
+                      alt={section.sectionImageAlt || section.period}
+                      className="w-full h-56 md:h-72 object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              )}
               {section.points.map((point) => (
                 <article
                   key={point.year}
@@ -414,6 +435,18 @@ const Spirit = () => {
                         </li>
                       ))}
                     </ul>
+                    {point.image && (
+                      <div className="mt-5 overflow-hidden rounded-xl border border-green-900/10 bg-slate-100">
+                        <img
+                          src={point.image}
+                          alt={point.imageAlt || point.year}
+                          className="w-full h-52 md:h-72 object-cover"
+                          style={point.imagePosition ? { objectPosition: point.imagePosition } : undefined}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    )}
                     {point.year === '2005年' && <BeforeAfterSlider />}
                   </div>
                 </article>

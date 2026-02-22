@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'; 
 import { ArrowRightOutlined, PlayCircleOutlined } from '@ant-design/icons';
 
-const bgImage = "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop";
+const bgImage = "/shouye.jpg";
 const HOT_NEWS_LINKS = {
   left: 'http://www.jicengwang.cn/jy/2026-02-12/292581.html',
   topRight: 'https://life.china.com/2026-02/12/content_542768.html',

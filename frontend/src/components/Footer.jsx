@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { WechatOutlined, MailOutlined, EnvironmentOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import { MailOutlined, EnvironmentOutlined, ArrowRightOutlined } from '@ant-design/icons';
+
+const SOCIAL_CHANNELS = [
+  { key: 'weixin', label: '微信', image: '/weixin.jpg' },
+  { key: 'bilibili', label: 'B站', image: '/bilibili.jpg' },
+  { key: 'douyin', label: '抖音', image: '/douyin.jpg' },
+  { key: 'qq', label: 'QQ', image: '/QQ.jpg' },
+  { key: 'weibo', label: '微博', image: '/weibo.jpg' }
+];
 
 const Footer = () => {
   return (
@@ -23,15 +31,7 @@ const Footer = () => {
               “瀚海筑梦 · 守绿传薪”社会实践团。<br/>
               以数字技术赋能乡村振兴，记录彰武治沙七十载的绿色奇迹，传承大漠深处的精神火炬。
             </p>
-            <div className="flex gap-4">
-               {/* 装饰性的社交图标 */}
-               <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-green-600 hover:text-white transition-all cursor-pointer">
-                  <WechatOutlined />
-               </div>
-               <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-green-600 hover:text-white transition-all cursor-pointer">
-                  <MailOutlined />
-               </div>
-            </div>
+            <p className="text-xs text-slate-500 uppercase tracking-widest">Official Contact Channels</p>
           </div>
 
           {/* 2. 快速导航 (两列) */}
@@ -64,17 +64,35 @@ const Footer = () => {
               </p>
               <p className="flex items-center gap-3">
                 <MailOutlined className="text-green-500"/>
-                <span>zhangwu_project@dlut.edu.cn</span>
+                <span>hhzmsjt@qq.com</span>
               </p>
             </div>
-            
-            {/* 模拟一个简单的订阅框 */}
-            <div className="mt-8">
-               <p className="text-xs text-slate-500 mb-2">订阅我们的最新动态</p>
-               <div className="flex">
-                  <input type="text" placeholder="Email Address" className="bg-white/5 border border-white/10 rounded-l px-4 py-2 text-sm w-full focus:outline-none focus:border-green-500 transition-colors"/>
-                  <button className="bg-green-700 text-white px-4 py-2 rounded-r text-sm hover:bg-green-600 transition-colors">订阅</button>
-               </div>
+
+            <div className="mt-6">
+              <div className="flex flex-wrap gap-3">
+                {SOCIAL_CHANNELS.map((channel) => (
+                  <div key={channel.key} className="group relative">
+                    <button
+                      type="button"
+                      className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300 hover:bg-green-700 hover:text-white hover:border-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500/60"
+                    >
+                      {channel.label}
+                    </button>
+                    <div className="pointer-events-none absolute left-1/2 bottom-[calc(100%+10px)] -translate-x-1/2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-200 z-20">
+                      <div className="w-36 rounded-xl border border-white/15 bg-slate-900/95 p-2 shadow-2xl">
+                        <img
+                          src={channel.image}
+                          alt={`${channel.label}二维码`}
+                          className="w-full h-32 object-cover rounded-lg"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <p className="text-center text-[11px] text-slate-300 mt-1">{channel.label}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
