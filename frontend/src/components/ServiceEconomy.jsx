@@ -1,5 +1,6 @@
 import React, { useMemo, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import {
   ShopOutlined,
   RocketOutlined,
@@ -51,9 +52,11 @@ const FloatingHearts = () => {
 const pick = (arr, idx, fallback = '') => (Array.isArray(arr) && arr[idx] ? arr[idx] : fallback);
 
 const ServiceEconomy = ({ data }) => {
+  const navigate = useNavigate();
   const ecommerceRef = useRef(null);
   const logisticsRef = useRef(null);
   const tourismRef = useRef(null);
+  const tourismSpotRefs = useRef({});
 
   const hero = data?.hero || {};
   const stats = data?.stats || [];
@@ -75,6 +78,19 @@ const ServiceEconomy = ({ data }) => {
 
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const scrollToTourismSpot = (spotName) => {
+    if (!spotName) return;
+    tourismSpotRefs.current[spotName]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
+  const gotoTourismDetail = (spot) => {
+    if (spot?.studyId) {
+      navigate(`/activity/study/${spot.studyId}`);
+      return;
+    }
+    navigate('/activity/study');
   };
 
   const navItems = [
@@ -322,7 +338,18 @@ const ServiceEconomy = ({ data }) => {
 
           <div className="relative h-[520px] w-full flex justify-center items-center mb-10">
             <div className="absolute z-10 transform -rotate-6 -translate-x-32 hover:z-50 hover:scale-110 hover:rotate-0 transition-all duration-500 cursor-pointer">
-              <div className="bg-white p-3 pb-12 shadow-xl w-64 border border-gray-200 relative">
+              <div
+                className="bg-white p-3 pb-12 shadow-xl w-64 border border-gray-200 relative"
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToTourismSpot(pick(tourismCards, 0, {}).name)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    scrollToTourismSpot(pick(tourismCards, 0, {}).name);
+                  }
+                }}
+              >
                 <img
                   src={pick(tourismCards, 0, {}).images?.[0] || '/image/tertiary-44.jpeg'}
                   className="w-full h-48 object-cover"
@@ -335,7 +362,18 @@ const ServiceEconomy = ({ data }) => {
             </div>
 
             <div className="absolute z-20 transform hover:z-50 hover:scale-110 transition-all duration-500 cursor-pointer">
-              <div className="bg-white p-4 pb-16 shadow-2xl w-80 border border-gray-200 relative">
+              <div
+                className="bg-white p-4 pb-16 shadow-2xl w-80 border border-gray-200 relative"
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToTourismSpot(pick(tourismCards, 1, {}).name)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    scrollToTourismSpot(pick(tourismCards, 1, {}).name);
+                  }
+                }}
+              >
                 <img
                   src={pick(tourismCards, 1, {}).images?.[0] || '/image/tertiary-50.jpeg'}
                   className="w-full h-64 object-cover"
@@ -348,7 +386,18 @@ const ServiceEconomy = ({ data }) => {
             </div>
 
             <div className="absolute z-10 transform rotate-6 translate-x-32 hover:z-50 hover:scale-110 hover:rotate-0 transition-all duration-500 cursor-pointer">
-              <div className="bg-white p-3 pb-12 shadow-xl w-64 border border-gray-200 relative">
+              <div
+                className="bg-white p-3 pb-12 shadow-xl w-64 border border-gray-200 relative"
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToTourismSpot(pick(tourismCards, 2, {}).name)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    scrollToTourismSpot(pick(tourismCards, 2, {}).name);
+                  }
+                }}
+              >
                 <img
                   src={pick(tourismCards, 2, {}).images?.[0] || '/image/tertiary-52.jpeg'}
                   className="w-full h-48 object-cover"
@@ -363,7 +412,22 @@ const ServiceEconomy = ({ data }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {tourismSpots.map((spot) => (
-              <div key={spot.name} className="bg-white rounded-2xl border border-green-100 p-5 shadow-sm hover:shadow-md transition-shadow">
+              <div
+                key={spot.name}
+                ref={(node) => {
+                  if (node) tourismSpotRefs.current[spot.name] = node;
+                }}
+                role="button"
+                tabIndex={0}
+                onClick={() => gotoTourismDetail(spot)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    gotoTourismDetail(spot);
+                  }
+                }}
+                className="bg-white rounded-2xl border border-green-100 p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 cursor-pointer"
+              >
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{spot.name}</h3>
                 <p className="text-sm text-slate-600 mb-3">{spot.subtitle}</p>
                 <p className="text-slate-700 leading-relaxed text-sm mb-2">{spot.desc}</p>
@@ -371,6 +435,7 @@ const ServiceEconomy = ({ data }) => {
                   <span className="font-bold">特色体验：</span>
                   {spot.experience}
                 </p>
+                <p className="text-xs text-emerald-600 font-bold mt-3">点击查看详细介绍</p>
               </div>
             ))}
           </div>

@@ -1,22 +1,39 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { database } from '../data';
 import { EnvironmentOutlined, ArrowRightOutlined } from '@ant-design/icons';
 
 const Tours = () => {
-  const [activeSpot, setActiveSpot] = useState(null);
+  const [selectedSpotId, setSelectedSpotId] = useState(null);
+  const [hoveredSpotId, setHoveredSpotId] = useState(null);
+  const lastClickRef = useRef({ id: null, time: 0 });
   const navigate = useNavigate();
   const mapSpots = database.tours || [];
 
   const selectedSpot = useMemo(
-    () => mapSpots.find((spot) => spot.id === activeSpot) || mapSpots[0],
-    [activeSpot, mapSpots]
+    () => mapSpots.find((spot) => spot.id === selectedSpotId) || null,
+    [selectedSpotId, mapSpots]
   );
 
-  useEffect(() => {
-    if (!activeSpot && mapSpots.length > 0) setActiveSpot(mapSpots[0].id);
-  }, [activeSpot, mapSpots]);
+  const handleSpotClick = (spotId) => {
+    if (selectedSpotId === spotId) {
+      navigate(`/activity/study/${spotId}`);
+      return;
+    }
+
+    const now = Date.now();
+    const isQuickSecondClick =
+      lastClickRef.current.id === spotId && now - lastClickRef.current.time < 450;
+
+    if (isQuickSecondClick) {
+      navigate(`/activity/study/${spotId}`);
+      return;
+    }
+
+    setSelectedSpotId(spotId);
+    lastClickRef.current = { id: spotId, time: now };
+  };
 
   return (
     <div className="pt-24 min-h-screen bg-[linear-gradient(160deg,#f8fafc_0%,#f0fdf9_45%,#fffaf0_100%)] pb-20 relative overflow-hidden">
@@ -46,8 +63,7 @@ const Tours = () => {
           </div>
           <h1 className="text-4xl md:text-5xl font-serif text-slate-900 mb-4">全域旅游 · 研学导览</h1>
           <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            以“林场-草原-湿地-观景台-文化景区”五节点构建沉浸式研学动线。<br />
-            点击地图点位，进入该点位详情页面。
+            以“林场-草原-湿地-观景台-文化景区”五节点构建沉浸式研学动线。
           </p>
         </motion.div>
 
@@ -65,15 +81,30 @@ const Tours = () => {
                 type="button"
                 className="absolute w-6 h-6 md:w-8 md:h-8 -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10 group"
                 style={{ left: `${spot.x}%`, top: `${spot.y}%` }}
-                onMouseEnter={() => setActiveSpot(spot.id)}
-                onClick={() => navigate(`/activity/study/${spot.id}`)}
+                onMouseEnter={() => setHoveredSpotId(spot.id)}
+                onMouseLeave={() => setHoveredSpotId((prev) => (prev === spot.id ? null : prev))}
+                onClick={() => handleSpotClick(spot.id)}
               >
-                <span className={`absolute inline-flex h-full w-full rounded-full ${activeSpot === spot.id ? 'bg-emerald-500' : 'bg-red-500'} opacity-75 animate-ping`} />
-                <span className={`relative inline-flex rounded-full h-full w-full border-2 border-white shadow-lg items-center justify-center text-white transition-transform group-hover:scale-125 ${activeSpot === spot.id ? 'bg-emerald-600' : 'bg-red-600'}`}>
+                <span
+                  className={`absolute inline-flex h-full w-full rounded-full ${
+                    selectedSpotId === spot.id || hoveredSpotId === spot.id ? 'bg-emerald-500' : 'bg-red-500'
+                  } opacity-75 animate-ping`}
+                />
+                <span
+                  className={`relative inline-flex rounded-full h-full w-full border-2 border-white shadow-lg items-center justify-center text-white transition-transform group-hover:scale-125 ${
+                    selectedSpotId === spot.id || hoveredSpotId === spot.id ? 'bg-emerald-600' : 'bg-red-600'
+                  }`}
+                >
                   <EnvironmentOutlined className="text-[10px] md:text-xs" />
                 </span>
 
-                <span className={`absolute top-8 left-1/2 -translate-x-1/2 whitespace-nowrap backdrop-blur-sm px-2 py-1 rounded text-xs font-bold shadow-sm border pointer-events-none ${activeSpot === spot.id ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-white/90 border-gray-100 text-slate-800'}`}>
+                <span
+                  className={`absolute top-8 left-1/2 -translate-x-1/2 whitespace-nowrap backdrop-blur-sm px-2 py-1 rounded text-xs font-bold shadow-sm border pointer-events-none ${
+                    selectedSpotId === spot.id || hoveredSpotId === spot.id
+                      ? 'bg-emerald-50 border-emerald-200 text-emerald-700'
+                      : 'bg-white/90 border-gray-100 text-slate-800'
+                  }`}
+                >
                   {spot.name}
                 </span>
               </button>
@@ -105,9 +136,6 @@ const Tours = () => {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-gray-400 text-sm">提示：地图点击与右侧卡片都可进入对应点位详情。</p>
-        </div>
       </div>
     </div>
   );

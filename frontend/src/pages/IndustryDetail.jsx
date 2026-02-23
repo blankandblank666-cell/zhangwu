@@ -82,32 +82,31 @@ const IndustryDetail = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 md:-mt-14 relative z-10 space-y-8">
           <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            <div className="lg:col-span-8 bg-white rounded-3xl shadow-md border border-green-100 p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-4">彰武农业总述</h2>
-              <p className="text-slate-700 leading-[1.95] text-justify">{primaryModule.agricultureOverview}</p>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-8 relative overflow-hidden rounded-3xl border-2 border-emerald-200/80 bg-[linear-gradient(145deg,#ffffff_0%,#f6fef7_55%,#ecfdf5_100%)] shadow-[0_16px_42px_rgba(16,185,129,0.16)]"
+            >
+              <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-emerald-300/20 blur-2xl pointer-events-none" />
+              <div className="absolute -bottom-20 -left-20 w-52 h-52 rounded-full bg-green-200/20 blur-2xl pointer-events-none" />
+              <div className="relative z-10 p-6 md:p-8">
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-600 text-white text-[11px] tracking-[0.16em] uppercase font-bold mb-4">
+                  Core Overview
+                </div>
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-4">彰武农业总述</h2>
+                <p className="text-slate-700 leading-[1.95] text-justify">{primaryModule.agricultureOverview}</p>
+              </div>
+            </motion.div>
             <div className="lg:col-span-4">
-              <DocImageGroup
-                images={agricultureOverviewImages}
-                label="彰武农业总述配图"
-                className="h-full"
-                singleHeight="h-full min-h-[220px]"
-              />
-            </div>
-          </section>
-
-          <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            <div className="lg:col-span-4 order-2 lg:order-1">
-              <DocImageGroup
-                images={forestryOverviewImages}
-                label="彰武林业总述配图"
-                className="h-full"
-                singleHeight="h-full min-h-[220px]"
-              />
-            </div>
-            <div className="lg:col-span-8 order-1 lg:order-2 bg-white rounded-3xl shadow-md border border-green-100 p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-4">彰武林业总述</h2>
-              <p className="text-slate-700 leading-[1.95] text-justify">{primaryModule.forestryOverview}</p>
+              <div className="h-full rounded-3xl border-2 border-emerald-200/80 bg-white/90 p-2 shadow-[0_12px_30px_rgba(16,185,129,0.14)]">
+                <DocImageGroup
+                  images={agricultureOverviewImages}
+                  label="彰武农业总述配图"
+                  className="h-full"
+                  singleHeight="h-full min-h-[220px]"
+                />
+              </div>
             </div>
           </section>
 
@@ -117,9 +116,6 @@ const IndustryDetail = () => {
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900">彰武特色农产品</h2>
                 <p className="text-xs md:text-sm text-slate-500 mt-1">基于产业模块文档整理，保留原始核心描述</p>
               </div>
-              <span className="text-xs px-3 py-1 rounded-full bg-green-50 text-green-700 border border-green-200">
-                配图来源：产业模块.docx
-              </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -161,6 +157,35 @@ const IndustryDetail = () => {
                 </article>
               ))}
             </div>
+          </section>
+
+          <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="lg:col-span-4 order-2 lg:order-1">
+              <div className="h-full rounded-3xl border-2 border-teal-200/80 bg-white/90 p-2 shadow-[0_12px_30px_rgba(20,184,166,0.15)]">
+                <DocImageGroup
+                  images={forestryOverviewImages}
+                  label="彰武林业总述配图"
+                  className="h-full"
+                  singleHeight="h-full min-h-[220px]"
+                />
+              </div>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-8 order-1 lg:order-2 relative overflow-hidden rounded-3xl border-2 border-teal-200/80 bg-[linear-gradient(145deg,#ffffff_0%,#f4fbfb_56%,#ecfeff_100%)] shadow-[0_16px_42px_rgba(13,148,136,0.16)]"
+            >
+              <div className="absolute -top-20 -left-20 w-52 h-52 rounded-full bg-teal-200/20 blur-2xl pointer-events-none" />
+              <div className="absolute -bottom-16 -right-16 w-44 h-44 rounded-full bg-cyan-200/20 blur-2xl pointer-events-none" />
+              <div className="relative z-10 p-6 md:p-8">
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-teal-600 text-white text-[11px] tracking-[0.16em] uppercase font-bold mb-4">
+                  Core Overview
+                </div>
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-4">彰武林业总述</h2>
+                <p className="text-slate-700 leading-[1.95] text-justify">{primaryModule.forestryOverview}</p>
+              </div>
+            </motion.div>
           </section>
 
           <section className="bg-white rounded-3xl shadow-md border border-green-100 p-6 md:p-8">
@@ -309,37 +334,39 @@ if (id === 'secondary') {
         {/* 渲染服务业组件 */}
         <ServiceEconomy data={item} />
         
-        {/* 底部商品推荐 (如果有) */}
-        {item.products && (
-           <div className="bg-white py-16 px-6 border-t border-gray-100 relative z-10">
-              <div className="max-w-6xl mx-auto">
-                  <div className="flex items-center gap-3 mb-8">
-                     <div className="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xl">
-                        <ShoppingCartOutlined />
-                     </div>
-                     <div>
-                        <h2 className="text-2xl font-bold text-slate-900">特色体验 & 产品</h2>
-                     </div>
-                  </div>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                     {item.products.map((product, idx) => (
-                        <div key={idx} className="group bg-white rounded-xl border border-gray-100 hover:shadow-lg transition-all overflow-hidden cursor-pointer">
-                           <div className="h-40 overflow-hidden relative">
-                              <img src={product.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform" alt={product.name}/>
-                           </div>
-                           <div className="p-4">
-                              <h3 className="font-bold text-slate-800 mb-1">{product.name}</h3>
-                              <div className="flex justify-between items-center mt-3">
-                                 <span className="text-red-600 font-bold">{product.price}</span>
-                                 <button className="text-xs bg-slate-900 text-white px-3 py-1.5 rounded-full hover:bg-green-600 transition-colors">查看</button>
-                              </div>
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-              </div>
-           </div>
-        )}
+        {/* 暂时隐藏：全域旅游“特色体验 & 产品”区块 */}
+        {/*
+          {item.products && (
+             <div className="bg-white py-16 px-6 border-t border-gray-100 relative z-10">
+                <div className="max-w-6xl mx-auto">
+                    <div className="flex items-center gap-3 mb-8">
+                       <div className="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xl">
+                          <ShoppingCartOutlined />
+                       </div>
+                       <div>
+                          <h2 className="text-2xl font-bold text-slate-900">特色体验 & 产品</h2>
+                       </div>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                       {item.products.map((product, idx) => (
+                          <div key={idx} className="group bg-white rounded-xl border border-gray-100 hover:shadow-lg transition-all overflow-hidden cursor-pointer">
+                             <div className="h-40 overflow-hidden relative">
+                                <img src={product.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform" alt={product.name}/>
+                             </div>
+                             <div className="p-4">
+                                <h3 className="font-bold text-slate-800 mb-1">{product.name}</h3>
+                                <div className="flex justify-between items-center mt-3">
+                                   <span className="text-red-600 font-bold">{product.price}</span>
+                                   <button className="text-xs bg-slate-900 text-white px-3 py-1.5 rounded-full hover:bg-green-600 transition-colors">查看</button>
+                                </div>
+                             </div>
+                          </div>
+                       ))}
+                    </div>
+                </div>
+             </div>
+          )}
+        */}
      </div>
    );
  }
