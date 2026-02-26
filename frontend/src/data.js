@@ -5,29 +5,12 @@ export const database = {
     // === 1. 治沙英雄数据 (Spirit板块) ===
     heroes: [
       {
-        id: "wangdianchen",
-        category: "party",
-        name: "王殿臣",
-        title: "彰武农民治沙先驱",
-        tags: ["党员先锋", "互助治沙", "阜新治沙第一人"],
-        avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=400",
-        quote: "年年撵着沙子种地，啥时候是个头儿？栽树吧！",
-        content: `
-          <p>王殿臣是彰武县丰田乡杏山村农民，被誉为阜新治沙第一人、彰武县第一个防沙造林英模，也是新中国成立后彰武农民自发治沙的先驱者，为彰武乃至全国治沙事业奠定了重要的群众基础和实践经验。</p>
-          <p>1949年前后，彰武县丰田乡杏山村地处科尔沁沙地南缘，是典型的风沙重灾区。全村6000亩土地中仅1270亩为耕地，其余均被黄沙覆盖，春秋季节村民无法正常耕作，只能被迫“撵荒种地”，风沙刮走一片就再开垦一片，而新开垦的荒地仅3年就会被大风剥去表土，农作物产量极低，较好的耕地每亩仅产120斤，轮荒地更是只有30斤左右。风沙不仅吞噬农田，还严重影响村民的日常生活，“风沙打到脸上生疼，刮进嘴里没法吃饭”成为当时最真实的写照。面对这样“沙进人退”的绝境，上级干部鼓励王殿臣：“栽树是最好的办法，你们组织栽树吧！”，这句话也坚定了他治沙的决心。</p>
-          <p>王殿臣横下一条心：“年年撵着沙子种地，啥时候是个头儿？栽树吧！不信大树挡不住风沙。”1949年4月，在党组织的支持下，他走亲串户说服村民，成立了彰武县第一个农民造林互助组，正式开启了集体治沙之路。1949年，互助组首次尝试集体造林，种下75亩树木，摸索沙地植树的初步经验；1950年，造林面积扩大到120亩，成活率达到90%以上，互助组成员也不断增加，治沙技术逐渐成熟；1951年，他牵头成立造林合作社，专门设立了7个造林小组和5个育苗小组，当年造林360亩；到1952年，又完成造林112亩，成活率稳定在85%以上，逐步形成了系统的造林方法，苗木质量也得到了显著提升。在长期的治沙实践中，王殿臣还带领村民创造了一套适合沙地的造林技术体系，推行“田成方、林成网”的整体规划，设计了18条防护林带和5片规模林地，构建起完整的防护体系，同时采取“自育自栽，先带后片”的策略，先培育本地苗木，先修建防护林带，再逐步扩大成片造林规模，更创新性地实施“拦河筑坝，以水育林”工程，通过修建水利设施解决沙地缺水难题，为树木生长提供了有力保障。</p>
-          <p>王殿臣的治沙努力最终收获了生态与经济效益的双丰收。生态方面，1953年，之前栽种的树木已长至3米高，形成了有效的防风屏障，成功保护农田免受风沙侵袭，杏山村的森林覆盖率从几乎为零提升至35%，彻底改变了过去“沙窝子”的恶劣面貌；1978年，他带领村民打造的18条防护林带被纳入三北防护林体系，升级为国有林场，总面积达到1.2万亩。经济方面，1953年，王殿臣所在的生产队一组，仅4亩地就产苗10.4万株，收入175万元东北币，获利135.15万元，比单纯种粮多收入95.15万元，这一成果让村民真切看到了治沙的经济价值，此后苗木生产逐渐成为村里的重要收入来源，真正实现了“治沙与致富”的双赢。个人荣誉上，1949年王殿臣被推选为彰武县劳动模范，1951年又当选为辽西省劳动模范，成为阜新地区治沙的标杆人物。</p>
-          <p>王殿臣的治沙实践有着深远的历史意义，他开创了彰武农民自发治沙的先河，用实际行动打破了“沙子无法治理”的宿命论，带动周边村庄纷纷效仿，逐渐形成了“全民治沙”的良好氛围。他探索出的“拦河筑坝，以水育林，自育自栽，先带后片”的治沙方法，为后续彰武大规模治沙提供了宝贵的实践经验，与刘斌等科研人员探索的“灌木综合治沙法”相互补充，共同构成了“彰武治沙方案”的早期基础。更重要的是，他身上“不屈不挠、敢为人先、无私奉献”的精神，成为了一代代彰武治沙人的精神灯塔，影响了董福财、侯贵、杨海清等后续众多治沙英模，更铸就了“矢志不移、永不退缩、默默无闻、甘于奉献”的彰武治沙精神内核。</p>
-          <p>王殿臣的治沙精神得以代代相传，他的儿子王国军后来担任杏山村村主任、党支部书记，始终坚守在治沙一线，继续守护着父亲留下的绿色财富。如今，杏山村的防护林带已成为三北防护林体系的重要组成部分，而王殿臣当年带领乡亲们种下的1.2万亩林海，依然在默默守护着辽宁中部城市群的生态安全，静静见证着彰武从“沙进人退”到“绿进沙退”的伟大转变，也永远铭记着这位治沙先驱的坚守与奉献。</p>
-        `
-      },
-      {
         id: "liubin",
         category: "party",
         name: "刘斌",
         title: "科研治沙奠基人",
         tags: ["党员先锋", "科研拓荒", "大漠苍松"],
-        avatar: "/liubin.jpg",
+        avatar: "./liubin.jpg",
         quote: "把我埋在章古台的林子里吧，我想永远当个护林员。",
         content: `
           <p>刘斌，原名赵文郁，曾是抗日英雄，曾任义县县长，被誉为“大漠苍松”，更是彰武科研治沙的奠基人，他主动舍弃舒适的工作环境，扎根章古台治沙一线二十余年，组建起新中国第一支治沙科研团队，用科学与坚守，为彰武乃至全国防沙治沙事业开辟了全新路径，奠定了坚实的科研与实践基础。</p>
@@ -45,7 +28,7 @@ export const database = {
         name: "董福财",
         title: "治沙书记",
         tags: ["党员先锋", "基层治沙", "北甸子村"],
-        avatar: "/dongfucai.jpg",
+        avatar: "./dongfucai.jpg",
         quote: "这是我们的家，我们不治沙谁来治沙！",
         content: `
           <p>董福财（1953.5-2015.3），曾任彰武县阿尔乡镇北甸子村党支部书记，被誉为“治沙书记”，是彰武基层治沙干部的杰出代表，更是扎根一线、无私奉献的治沙楷模。他生于沙窝、长于沙窝，深知风沙给乡亲们带来的苦难，主动扛起治沙重任，带领北甸子村村民与黄沙殊死搏斗二十余年，用毕生心血筑起绿色屏障，把“不适合人类居住”的沙窝子变成了宜居宜业的绿洲，用生命诠释了彰武治沙精神的深刻内涵。</p>
@@ -63,7 +46,7 @@ export const database = {
         name: "李东魁",
         title: "马背护林员",
         tags: ["党员先锋", "长期护林", "辽宁好人"],
-        avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=400",
+        avatar: "./image/lidongkui.png",
         quote: "选择大山、选择森林，也就是选择了艰难与无悔。",
         content: `
           <p>李东魁，1964年12月出生，1986年10月加入中国共产党，是一名退伍军人，更是彰武县章古台林场阿尔乡护林点的一名普通护林员，被誉为“樟子松守护神”“马背上的森林守护者”。作为彰武无数普通治沙民众中的杰出代表，他以军人的坚定意志，扎根科尔沁沙地南缘近40年，独守8500亩樟子松林，用一生的坚守守护着老一辈治沙人的心血，用平凡的行动诠释了彰武治沙精神，成为新时代生态守护者的楷模，也是“彰武治沙团队”的核心成员之一，与宋晓东、杨海清等人一同当选“辽宁好人”。</p>
@@ -82,7 +65,7 @@ export const database = {
         name: "王秀英",
         title: "治沙与致富探索者",
         tags: ["党员先锋", "技术推广", "全国人大代表"],
-        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+        avatar: "./image/wangxiuying.png",
         quote: "让黄沙止步，让乡亲富起来。",
         content: `
           <p>王秀英，第十四届全国人大代表，现任彰武县农业发展服务中心教授研究员级高级农艺师，是彰武治沙事业中兼具技术素养与责任担当的杰出代表，更是治沙与致富相结合的探索者、实践者。她扎根彰武基层三十余年，从小浸润在治沙氛围中，亲眼目睹风沙肆虐的苦难，始终坚守生态保护与农民增收双赢的初心，用专业技术创新治沙模式，用履职担当推广彰武经验，传承了老一辈治沙人的精神，为彰武防沙治沙与乡村振兴深度融合作出了不可磨灭的贡献。</p>
@@ -101,7 +84,7 @@ export const database = {
         name: "杨海清",
         title: "个体治沙第一人",
         tags: ["民众力量", "个体承包治沙", "辽宁好人"],
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400",
+        avatar: "./image/yanghaiqing.jpg",
         quote: "给子孙后代留点绿色念想。",
         content: `
           <p>杨海清，中共党员，彰武县四合城乡王家村（下河村）农民，县政协委员，被誉为“辽宁省个体治沙第一人”“当代愚公”，是全国绿化劳动模范、“辽宁好人”彰武治沙团队8人代表之一。作为彰武个体治沙的杰出标杆，他以一名普通农民的赤诚与韧劲，扎根科尔沁沙地南缘二十余载，主动承包千亩黄沙坡，穷尽毕生心血植树固沙，用务实智慧破解治沙难题，带动乡亲共同参与治沙事业，传承了老一辈治沙人的无私奉献精神，为彰武防沙治沙事业注入了鲜活的个体力量，用一生坚守书写了沙海变绿洲的个体治沙传奇。</p>
@@ -121,7 +104,7 @@ export const database = {
         name: "侯贵",
         title: "“倔强的沙打旺”",
         tags: ["民众力量", "辞职治沙", "长期坚守"],
-        avatar: "https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=400",
+        avatar: "./image/hougui.png",
         quote: "林子造出来了，风沙治住了，那就是最好的回报。",
         content: `
           <p>侯贵，1951年7月出生于彰武县四合城镇刘家村西树林屯，是一名老共产党员，被誉为“倔强的沙打旺”，更是彰武普通治沙民众的杰出代表。他曾担任西树林村党支部书记、老窝堡村村主任，却在年近半百时，毅然辞去村干部职务，扎根沙丘深处，以一己之力与黄沙搏斗二十余年，用坚守和汗水在科尔沁沙地南缘种下大片林海，用平凡的行动诠释了彰武治沙精神的深刻内涵，成为无数普通民众参与治沙的标杆。</p>
@@ -136,32 +119,12 @@ export const database = {
         `
       },
       {
-        id: "huangzheng",
-        category: "public",
-        name: "黄征",
-        title: "灌木药材治沙探索者",
-        tags: ["民众力量", "治沙增收", "产业融合"],
-        avatar: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=400",
-        quote: "治沙要治得住，也要让乡亲有奔头。",
-        content: `
-          <p>黄征，彰武县大冷镇普通农民，是彰武治沙队伍中默默奉献的民众代表，更是生态与经济效益双赢治沙模式的探索者。他生于沙区、长于沙区，亲眼见证了风沙肆虐给家乡带来的苦难，怀揣着守护家园、带动乡亲增收的初心，主动承包沙化荒地，扎根科尔沁沙地南缘十余载，摒弃“只治沙、不增收”的传统思路，深耕灌木与药材间作的治沙路径，用朴实的行动、务实的智慧，在茫茫沙地上书写了普通民众治沙致富的动人篇章，传承了彰武治沙人“矢志不移、默默无闻、甘于奉献”的精神底色。</p>
-          <p>黄征的家乡彰武县大冷镇，曾是风沙肆虐的重灾区，地处科尔沁沙地南缘，受柳河流域沙化影响，昔日这里满眼皆是茫茫黄沙，土地贫瘠、植被稀少，流沙不断蚕食农田，当地村民长期面临“种粮不收、增收无望”的困境，就连耐旱的玉米也常常因风沙侵袭而减产，不少村民只能靠天吃饭，甚至被迫离开故土。彼时的大冷镇，风沙漫天、土地荒芜，与如今“鱼米之乡”的模样形成了鲜明对比，而这一转变的背后，离不开黄征等一代代治沙民众的默默坚守与不懈奋斗。</p>
-          <p>看着家乡被风沙裹挟的模样，黄征心中满是焦急，也渐渐萌生了治沙的念头。他深知，单纯的植树固沙难以让治沙事业长久延续，唯有让治沙与增收结合，让村民在治沙中尝到甜头，才能带动更多人参与其中。恰逢彰武县大力推进防沙治沙工作，鼓励民众承包沙化荒地、探索多元治沙模式，黄征毅然抓住机遇，主动承包了大冷镇500亩沙化最为严重的荒地，下定决心要在这片沙地上闯出一条“治沙、固沙、增收”三者兼顾的道路，改变家乡的沙化面貌。</p>
-          <p>初涉治沙之路，困难远超黄征的想象。他承包的沙荒地，土壤贫瘠、保水保肥能力极差，加之降水稀少、风沙频繁，别说种植药材，就连耐旱的灌木也难以存活。起初，他尝试栽种普通的固沙树木，却因沙地贫瘠、缺水严重，大部分树苗都枯萎死亡，前期投入的人力、物力、财力几乎付诸东流。身边的村民纷纷劝他放弃，觉得“沙地里种不出好庄稼，更种不出值钱的药材”，但黄征骨子里的韧劲不允许自己半途而废，他坚信，只要找对方法、坚持不懈，就一定能在沙地上种出希望。</p>
-          <p>为了找到适合沙地生长的品种和种植模式，黄征多次前往县治沙研究所请教专家，结合彰武沙地土壤特性和大冷镇的气候条件，最终确定了“灌木+药材”的间作治沙模式。他借鉴彰武治沙科研成果和外地先进经验，选择耐旱、耐寒、耐贫瘠，且主根发达、固沙效果好的柠条等灌木作为固沙主力，这种灌木主根可深入地下数米，庞大的根系如同天然固沙网，能牢牢锁住流沙，同时其枝叶还能作为优质牧草，兼顾生态与养殖效益；在灌木间隙，他试种沙棘、甘草、沙参等耐旱中药材，这些药材不仅适合沙地生长，还具有较高的经济价值，可有效带动增收。</p>
-          <p>确定模式后，黄征全身心投入到治沙工作中。他每天天不亮就背着工具走进沙荒地，平整沙丘、改良土壤、栽种灌木和药材，日复一日、年复一年，不畏风沙、不惧酷暑严寒。为了提高苗木成活率，他借鉴老一辈治沙人的经验，改良栽种方法，在栽种前深耕土地、增施有机肥，栽种后及时浇水、覆盖秸秆保湿，风沙天气来临前，还会搭建简易沙障，保护幼苗不被风沙刮走。遇到药材种植技术难题，他就买来相关书籍自学，还主动联系中药材种植户交流经验，反复试验、不断摸索，慢慢掌握了沙地药材种植的技巧，解决了苗木成活率低、药材长势差等一系列难题。</p>
-          <p>功夫不负有心人，经过十余载的默默坚守与不懈奋斗，黄征承包的500亩沙荒地发生了翻天覆地的变化。昔日茫茫黄沙被郁郁葱葱的灌木和药材覆盖，流沙得到有效固定，土壤有机质含量大幅提升，周边的生态环境明显改善，风沙天气减少，空气也变得愈发清新，曾经的“沙窝子”渐渐变成了“聚宝盆”。他种植的中药材长势良好，年产量逐年提升，通过收购、加工、销售，不仅实现了自身增收，还带动周边村民参与到灌木种植和中药材种植中来，为村民提供了就业岗位，教会了村民沙地种植技巧，让更多人在治沙中实现了增收致富。</p>
-          <p>黄征的治沙之路，没有惊天动地的壮举，没有显赫的荣誉光环，却用一名普通农民的赤诚与坚韧，诠释了彰武治沙精神的深刻内涵。他不盲目跟风，而是结合实际探索多元治沙模式，既守住了生态底线，又拓宽了增收路径，弥补了传统治沙模式的不足，为彰武民众治沙提供了可借鉴的宝贵经验。他传承了王殿臣、杨海清等老一辈农民治沙人的初心，与刘斌等科研人员、李东魁等护林员、董福财等基层干部相互呼应，成为彰武治沙多元力量中不可或缺的一员，用自己的坚守与付出，为科尔沁沙地南缘的绿色延伸贡献着普通民众的力量。</p>
-          <p>如今，黄征依然坚守在治沙一线，每天穿梭在自己栽种的灌木和药材地里，修剪枝叶、监测长势、改良品种，继续深耕“灌木+药材”的治沙模式，不断优化种植方案，努力提升生态与经济效益。他的故事，虽不轰轰烈烈，却温暖而有力量，激励着更多普通民众加入到彰武治沙队伍中来，用平凡的行动守护绿色家园，让彰武治沙精神代代相传，让绿色希望在茫茫沙地上不断延伸，助力彰武打赢科尔沁沙地歼灭战，实现“沙退绿进、富民兴县”的美好愿景。</p>
-        `
-      },
-      {
         id: "chenqihua",
         category: "public",
         name: "陈其华",
         title: "北甸子村治沙见证者",
         tags: ["民众力量", "党员林", "长期守护"],
-        avatar: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?q=80&w=400",
+        avatar: "./image/chenqihua.png",
         quote: "守住脚下的土地，种出一片绿洲。",
         content: `
           <p>陈其华，彰武县阿尔乡镇北甸子村老村民，中共党员，是彰武治沙历程中默默奉献的民众代表，更是北甸子村从“沙进人退”到“绿进沙退”的全程见证者与实践者。他生于沙窝、长于沙窝，一辈子扎根科尔沁沙地南缘，跟着村党支部书记董福财，与乡亲们并肩作战，以最朴实的行动、最坚韧的毅力，在茫茫沙地上栽种希望、守护家园，用一生坚守诠释了彰武治沙人“矢志不移、永不退缩、默默无闻、甘于奉献”的精神底色，成为彰武民间治沙力量中最动人的缩影。</p>
@@ -181,7 +144,7 @@ export const database = {
         name: "朱德华",
         title: "风沙规律研究先驱",
         tags: ["科研脊梁", "农田防护林", "长期观测"],
-        avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=400",
+        avatar: "./image/zhudehua.png",
         quote: "研究风沙就要蹲在沙地里，风越大越要守着。",
         content: `
           <p>朱德华，浙江义乌人，曾任辽宁省沙地治理与利用研究所所长，是彰武治沙科研团队中承前启后的关键一员，更是扎根塞北沙海、默默深耕的科研先驱。他告别江南鱼米之乡，不远千里奔赴彰武章古台，以一根扁担挑起行囊与初心，在治沙科研一线坚守四十余年，用“十年磨一剑”的执着，摸清风沙规律、筑牢防护根基，传承了刘斌等老一辈治沙人的精神，为彰武农田防护林建设和荒漠化治理提供了坚实的科研支撑，用一生坚守书写了科研治沙的赤诚答卷。</p>
@@ -195,31 +158,12 @@ export const database = {
         `
       },
       {
-        id: "jiaoshuren",
-        category: "science",
-        name: "焦树仁",
-        title: "第一代固沙工程师",
-        tags: ["科研脊梁", "樟子松引种", "沙地改良"],
-        avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=80&w=400",
-        quote: "治沙不能只靠热情，更要靠科学。",
-        content: `
-          <p>焦树仁，新中国第一代固沙人，高级工程师，是彰武治沙科研团队中不可或缺的骨干力量，更是扎根章古台沙海、默默深耕的治沙先驱。他与朱德华、宋晓东等治沙同仁并肩作战，扎根科尔沁沙地南缘近四十载，怀揣着治理风沙、守护家园的赤诚初心，深耕荒漠化治理与沙地改良科研领域，全程参与樟子松引种固沙关键实践，攻克多项治沙技术难题，用专业与坚守传承刘斌等老一辈治沙人的精神，为彰武防沙治沙科研事业发展、“彰武方案”完善提供了有力支撑，用一生奉献书写了科研治沙的动人答卷，成为彰武治沙队伍中令人敬佩的中坚力量。</p>
-          <p>上世纪50年代末，正值彰武治沙事业艰难起步的关键时期，年轻的焦树仁怀揣着满腔热忱，从东北林业大学毕业，主动放弃城市的发展机会，毅然奔赴风沙肆虐的彰武县章古台镇，投身于辽西省林业试验站（辽宁省沙地治理与利用研究所前身）的治沙科研工作。彼时的章古台，依旧是“一碗米里半碗沙，走一步退半步”的荒凉景象，一年365天里，刮风的日子超过200天，黄沙漫天、土地贫瘠，住的是简陋土坯房，吃的是粗粝玉米面，点的是昏暗煤油灯，极端艰苦的环境，没有击退焦树仁治沙的决心，反而让他更加坚定了“治住黄沙、还家园一片绿洲”的信念。</p>
-          <p>初到科研站，焦树仁便投身于刘斌带领的樟子松引种固沙科研实践中，成为团队中的核心骨干。当时，刘斌等人大胆提出将高纬度地区的樟子松引到彰武栽种，打破“北树南移”的技术瓶颈，但试种之路布满荆棘，第一年引种的5000余棵樟子松树苗，因章古台冬季干旱缺水、风沙过大，仅有两株存活，不少科研人员备受打击，甚至产生了放弃的念头。焦树仁始终坚守岗位，主动承担起树苗培育、数据观测的重任，跟着刘斌等老一辈科研人员，反复摸索樟子松的生长习性，改进育苗和栽种技术，第二年尝试给新栽种的树苗盖上防寒土，悉心照料、实时监测，用耐心和执着守护着每一株来之不易的绿苗。</p>
-          <p>在长期的治沙科研实践中，焦树仁深知，治沙不能只靠热情，更要靠科学，唯有摸清风沙规律、掌握沙地特性，才能让科研成果真正转化为治沙实效。他与朱德华等科研同仁并肩，扎根沙海深处，白天顶着烈日、迎着黄沙，穿梭在各个试验点和观测点之间，仔细记录樟子松的生长数据、风沙移动轨迹，以及土壤温湿度的变化，身上的衣服总是被汗水浸透、被风沙染黄，一天下来浑身都是沙土；夜晚，他回到简陋的土坯房，在煤油灯下手把手整理数据、分析规律，反复研究沙地改良的方法，常常忙到深夜。那些年，他和团队成员一起，忍受着孤独与艰辛，甚至有时会披着大衣露宿在沙地里，只为捕捉最真实的科研数据，攻克治沙过程中的一个又一个难题。</p>
-          <p>除了全程参与樟子松引种固沙实践，焦树仁还深耕沙地土壤改良领域，针对彰武沙地贫瘠、保水保肥能力差的问题，带领团队反复试验，探索出多种适合沙地的改良技术，通过增施有机肥、种植固氮植物、翻淤压沙等方式，逐步提升沙地肥力，改善土壤结构，为樟子松及其他固沙树种的生长提供了良好条件。他还参与了农田防护林建设的科研与实践，协助团队摸清风沙经过农田防护林的规律，为章古台周边农田防风林带的规划与建设提供了精准的科研支撑，推动曾经的贫瘠轮荒地，逐步转变为能产粮、能增收的稳固耕田，助力实现“治沙与致富”的双赢。</p>
-          <p>焦树仁一生淡泊名利、默默奉献，在章古台治沙科研一线坚守近四十载，从意气风发的青年学子，变成了满头白发的治沙老者，他把最宝贵的青春和心血，都奉献给了彰武的防沙治沙事业。他始终秉持着“无私奉献、勇于创新”的治沙精神，不仅专注于科研攻关，更注重治沙技术的推广和后辈人才的培养，常常毫无保留地将自己的科研经验和治沙技巧传授给年轻一代科研人员，用言传身教传递治沙初心，助力彰武治沙科研事业薪火不息。作为彰武治沙科研队伍的重要一员，他与王永魁、王润国、朱德华等同仁并肩作战，用顽强拼搏的精神，共同书写了彰武治沙的奋斗篇章，得到了业内同仁和当地群众的广泛认可与敬佩。</p>
-          <p>即便退休后，焦树仁依然牵挂着章古台的樟子松林和治沙事业，始终关注着彰武荒漠化治理的最新进展，时常回到章古台的沙地里，查看树木生长情况，为年轻一代科研人员提供指导和建议。他的一生，没有惊天动地的壮举，却用日复一日的坚守、精益求精的科研态度，攻克了一个又一个治沙难题，见证了彰武治沙从“屡战屡败”到“绿进沙退”的伟大转变，参与铸就了“矢志不移、永不退缩、默默无闻、甘于奉献”的彰武治沙精神。</p>
-          <p>焦树仁是彰武治沙科研队伍的缩影，他传承了刘斌等老一辈治沙人不屈不挠、无私奉献的精神，也影响了宋晓东等后辈治沙科研工作者，用自己的行动诠释了治沙人的责任与担当。他参与探索的樟子松引种固沙技术，后来荣获全国科学大会奖，在河北塞罕坝、陕西榆林等地广泛推广，种植总面积超过1000万亩，为全国荒漠化治理提供了宝贵的经验和借鉴。如今，章古台的林海郁郁葱葱，曾经的“沙窝子”早已变成了绿洲，而焦树仁用一生坚守浇灌的绿色希望，依旧在科尔沁沙地南缘不断延伸，他的科研初心与治沙精神，也将和这片林海一样，代代相传、生生不息，激励着后人接续奋斗，守护好这片来之不易的绿色家园。</p>
-        `
-      },
-      {
         id: "songxiaodong",
         category: "science",
         name: "宋晓东",
         title: "“樟子松医生”",
         tags: ["科研脊梁", "病虫害防治", "彰武松"],
-        avatar: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=400",
+        avatar: "./image/songxiaodong.png",
         quote: "咱们一定要把这片林子守护好。",
         content: `
           <p>宋晓东，曾任辽宁省固沙造林研究所所长，被誉为“樟子松医生”，是彰武治沙事业中科研攻坚的核心力量，更是刘斌等老一辈治沙先驱精神的忠实传承者。他扎根彰武章古台治沙一线三十余年，放弃出国深造、定居的机会，始终坚守在樟子松防护与沙地治理科研前沿，用专业与坚守保住了千万亩樟子松林，为彰武乃至全国防沙治沙事业的可持续发展注入了强大动力。</p>
@@ -240,50 +184,50 @@ export const database = {
         title: "精品农业 · 沙地富民",
         subtitle: "Premium Agriculture",
         summary: "立足沙区禀赋，推动生态优先、特色引领、三产融合的现代农业发展。",
-        img: "/nongye.jpg",
+        img: "./nongye.jpg",
         color: "green",
         module: {
           agricultureOverview: "彰武县作为国家商品粮生产基地、国家级农业现代化示范区，立足沙区资源禀赋走出了特色农业发展之路，粮食生产能力稳步提升，2025年粮食产量创24.75亿斤历史新高，玉米单产提升工程成效显著，“吨粮田”成为沙区农业发展样板，高标准农田建设、保护性耕作等农业基础工程持续推进，主要农作物耕种防收综合机械化率稳定在93%以上；特色农业亮点突出，地瓜、小米、沙泉大米等品牌影响力持续提升，“零碳红薯”成为地域新名片，彰武花生、黑豆、地瓜获国家地理标志产品认证，前福兴地镇、双庙镇明水村分别获评国家级农业产业强镇、“一村一品”示范村；畜牧产业实现循环发展，以“强牛羊、优猪禽”为思路完成多家养殖场智能化升级，猪牛羊禽出栏量稳步增长，畜禽粪污资源化利用体系不断完善；同时林下经济多元发展，中草药种植规模超3万亩，电商产业助力农产品上行，全口径电商交易额达3.3亿元，农业全产业链持续延伸。但县域农业发展仍存在深加工链条延伸不足、特色农业品牌影响力有待提升等问题，正通过打造现代农业“零碳”产业示范园区、实施农产品强链工程等举措，推动农业向高质量、三产融合方向持续发展。",
           forestryOverview: "彰武县地处科尔沁沙地南部，是辽宁科尔沁沙地歼灭战主战场、全国防沙治沙综合示范区，历经七十余载治沙造林攻坚，林业发展实现生态与产业双突破，全县林地面积达145.39万亩（人工林144.29万亩），森林覆盖率从新中国成立初期的2.9%提升至31.47%，沙化土地占比由96%降至36.56%，扬沙天气大幅减少，成功构筑起深入科尔沁沙地腹地超13公里的辽宁防沙治沙第一道防线，樟子松等固沙树种引种培育成效显著，彰武松成为特色绿化良种。如今彰武林业以“生态产业化、产业生态化”为核心，在筑牢生态屏障的基础上深挖林地资源价值，林下经济多元发展，已探索林药、林菌、林草等种养模式，中草药种植规模超3万亩，同时制定2025-2029年林下经济产业五年发展规划，计划打造10万亩林下中草药种植基地、10个国家林下中草药示范基地，同步推进林苗、林花等业态规模化发展；林业产业还形成种苗培育、生态旅游等延伸业态，章古台镇樟子松育苗年产值达9亿元，并通过“支部+合作社+企业”模式推动生态效益向经济效益转化，让林业成为县域生态保护与乡村振兴的重要支撑。",
           agricultureOverviewImages: [
-            "/nongye.jpg"
+            "./nongye.jpg"
           ],
           forestryOverviewImages: [
-            "/image/agri-26.jpeg"
+            "./image/agri-26.jpeg"
           ],
           featuredProducts: [
             {
               name: "彰武地瓜",
               description: "国家地理标志、全国名特优新农产品，种植于北纬42°黄金产薯带，依托沙壤土、沙泉水及充足光照培育，表皮紫红、薯肉橙红，可溶性总糖达15.70%，熟食甜糯细腻无纤维，主打烟薯25号、“明水1号”等鲜食品种，双庙镇明水村为核心产区，获评绿色食品A级产品。",
-              images: ["/image/agri-01.jpeg", "/image/agri-02.jpeg", "/image/agri-03.jpeg"]
+              images: ["./image/agri-01.jpeg", "./image/agri-02.jpeg", "./image/agri-03.jpeg"]
             },
             {
               name: "彰武黑豆",
               description: "国家地理标志、全国名特优新农产品，有百余年种植历史，彰武获“中国黑豆特产之乡”称号，沙壤土+沙泉水孕育的黑豆乌黑饱满、质地坚硬，蛋白质含量超48%，含丰富微量元素，煮熟后豆香浓郁、口感韧劲，乌皮青仁豆品种兼具食用与药用滋补价值。",
-              images: ["/image/agri-04.jpeg", "/image/agri-05.jpeg"]
+              images: ["./image/agri-04.jpeg", "./image/agri-05.jpeg"]
             },
             {
               name: "彰武花生",
               description: "国家地理标志、全国名特优新农产品，全县24个乡镇均有种植，认证面积达100万亩，沙质土壤适配白沙、阜花12等优质品种，花生网纹粗浅、籽仁饱满椭圆，口感细腻回甘、香味浓郁，加工的花生油清亮浓香，具备出口创汇能力，也是全国绿色食品原料（花生）标准化基地核心产品。",
-              images: ["/image/agri-06.jpeg", "/image/agri-07.jpeg", "/image/agri-08.jpeg"]
+              images: ["./image/agri-06.jpeg", "./image/agri-07.jpeg", "./image/agri-08.jpeg"]
             },
             {
               name: "彰武大米",
               description: "全国名特优新农产品，以沙泉水浇灌、沙壤土种植为特色，产地光照足、昼夜温差大，米粒晶莹半透、青白有光泽，蒸煮米香浓郁，饭粒油润粘而不腻，“粳星牌”大米为绿色食品A级产品，“磐山楼”有机大米获评辽宁省著名商标，形成产加销一体化产业链。",
-              images: ["/image/agri-09.jpeg", "/image/agri-10.jpeg"]
+              images: ["./image/agri-09.jpeg", "./image/agri-10.jpeg"]
             },
             {
               name: "彰武小米",
               description: "县域特色杂粮代表，以“六股道”牌等为核心品牌，获评绿色食品，依托沙区独特土壤和气候种植，米粒饱满、色泽金黄，熬煮后米油醇厚、口感绵密，营养丰富，是彰武杂粮产业的核心单品，与黑豆、荞麦等形成特色杂粮矩阵。",
-              images: ["/image/agri-11.jpeg", "/image/agri-12.jpeg"]
+              images: ["./image/agri-11.jpeg", "./image/agri-12.jpeg"]
             }
           ],
           agricultureFeatureIntro: "彰武农业立足沙区资源禀赋，走出了一条“生态优先、特色引领、三产融合”的高质量发展之路，其核心特色主要体现在以下几个方面：",
           agricultureFeatureImages: [
-            "/image/agri-13.jpeg",
-            "/image/agri-14.jpeg",
-            "/image/agri-15.jpeg",
-            "/image/agri-16.jpeg"
+            "./image/agri-13.jpeg",
+            "./image/agri-14.jpeg",
+            "./image/agri-15.jpeg",
+            "./image/agri-16.jpeg"
           ],
           agricultureFeatures: [
             {
@@ -326,32 +270,32 @@ export const database = {
             {
               name: "樟子松苗木",
               description: "彰武是全国重要的樟子松育苗基地，章古台镇樟子松育苗年产值达9亿元。培育的彰武松等特色良种，适应性强、成活率高，是防沙治沙和城市绿化的首选苗木，产品远销全国20多个省市。",
-              images: ["/image/agri-17.jpeg", "/image/agri-18.jpeg"]
+              images: ["./image/agri-17.jpeg", "./image/agri-18.jpeg"]
             },
             {
               name: "林下中草药（沙参、枸杞等）",
               description: "依托10万亩林下中草药示范基地，采用仿野生种植模式，产出的沙参、枸杞等药材品质优良、药效显著。全县中草药种植规模超3万亩，通过“合作社+林场+农户”模式，带动农户增收，成为林业经济新增长点。",
-              images: ["/image/agri-19.jpeg", "/image/agri-20.jpeg"]
+              images: ["./image/agri-19.jpeg", "./image/agri-20.jpeg"]
             },
             {
               name: "林下食用菌（香菇、木耳等）",
               description: "利用林地遮阴、保湿的天然环境，发展林下食用菌种植。香菇、木耳等产品肉质肥厚、口感鲜美，无农药残留，深受市场青睐，是生态友好型的高附加值林业产品。",
-              images: ["/image/agri-21.jpeg", "/image/agri-22.jpeg", "/image/agri-23.jpeg"]
+              images: ["./image/agri-21.jpeg", "./image/agri-22.jpeg", "./image/agri-23.jpeg"]
             },
             {
               name: "林果产品（山杏、沙果等）",
               description: "沙区适宜的气候条件孕育了丰富的林果资源，山杏、沙果等果实酸甜可口，既可鲜食，也可加工成果酱、果干等产品。林果产业既改善了生态环境，又为当地带来了可观的经济收益。",
-              images: ["/image/agri-24.jpeg", "/image/agri-25.jpeg"]
+              images: ["./image/agri-24.jpeg", "./image/agri-25.jpeg"]
             },
             {
               name: "生态旅游文创产品",
               description: "依托万亩松林和沙地景观，开发出以樟子松、治沙精神为主题的文创产品，如木质工艺品、沙画、纪念册等。这些产品将生态价值与文化创意相结合，成为彰武林业生态旅游的重要伴手礼。",
-              images: ["/shahua.jpg", "/yishu.jpg"]
+              images: ["./image/shahua.jpg", "./image/yishu.jpg"]
             }
           ],
           forestryFeatureIntro: "彰武林业作为全国防沙治沙的标杆，其特色主要体现在生态屏障建设、产业生态化发展和三产融合三个维度：",
           forestryFeatureImages: [
-            "/image/agri-26.jpeg"
+            "./image/agri-26.jpeg"
           ],
           forestryFeatures: [
             {
@@ -433,9 +377,9 @@ export const database = {
         `,
         // 该产业下的商品/助农链接
         products: [
-          { name: "彰武沙地蜜薯", price: "¥29.9 / 5斤", img: "/digua.jpg", link: "#" },
-          { name: "林下赤松茸", price: "¥58.0 / 斤", img: "/songrong.jpg", link: "#" },
-          { name: "有机花生油", price: "¥89.0 / 桶", img: "/you.jpg", link: "#" }
+          { name: "彰武沙地蜜薯", price: "¥29.9 / 5斤", img: "./digua.jpg", link: "#" },
+          { name: "林下赤松茸", price: "¥58.0 / 斤", img: "./songrong.jpg", link: "#" },
+          { name: "有机花生油", price: "¥89.0 / 桶", img: "./you.jpg", link: "#" }
         ]
       },
       {
@@ -443,7 +387,7 @@ export const database = {
         title: "点沙成金 · 硅砂工业",
         subtitle: "Silica Sand Industry",
         summary: "世界级铸造砂基地，变废为宝的工业奇迹。",
-        img: "/guishacahnye.jpg",
+        img: "./guishacahnye.jpg",
         color: "blue",
         content: `
           <p>彰武县拥有丰富的天然硅砂资源，储量大、品质优。过去，这些沙子是风沙灾害的源头；现在，它们成为了工业生产的“金沙”。</p>
@@ -456,7 +400,7 @@ export const database = {
           {
             id: 1,
             name: "彰武县联信铸造硅砂有限公司",
-            logo: "/image/secondary-27.jpeg",
+            logo: "./image/secondary-27.jpeg",
             front: {
               desc: "成立于2006年，总部位于“中国砂都”彰武，是国内领先的铸造用砂及砂设备综合服务商，年销量超100万吨，年销售额约6亿元。",
               tag: "全链服务"
@@ -470,7 +414,7 @@ export const database = {
           {
             id: 2,
             name: "彰武联信金莹铸造材料有限公司",
-            logo: "/image/secondary-28.jpeg",
+            logo: "./image/secondary-28.jpeg",
             front: {
               desc: "联信铸砂集团与台湾金晶集团合资企业，专注于高端铸造材料研发与生产，拥有国际先进的覆膜砂生产线。",
               tag: "高端材料"
@@ -484,7 +428,7 @@ export const database = {
           {
             id: 3,
             name: "彰武县联信球形新材料有限公司",
-            logo: "/image/secondary-27.jpeg",
+            logo: "./image/secondary-27.jpeg",
             front: {
               desc: "联信铸砂集团与日本山川产业株式会社合资企业，是东北首家熔融陶瓷砂（宝珠砂）生产企业。",
               tag: "合资出海"
@@ -498,7 +442,7 @@ export const database = {
           {
             id: 4,
             name: "天阳新材料（辽宁）有限公司",
-            logo: "/image/secondary-27.jpeg",
+            logo: "./image/secondary-27.jpeg",
             front: {
               desc: "国家级高新技术企业，拥有15项产品发明专利，年产能6万吨，智能化生产线实现高效生产。（文档注明：无logo版权）",
               tag: "高新企业"
@@ -512,7 +456,7 @@ export const database = {
           {
             id: 5,
             name: "辽宁隆源砂业有限公司",
-            logo: "/image/secondary-29.jpeg",
+            logo: "./image/secondary-29.jpeg",
             front: {
               desc: "昆仑隆源集团旗下企业，专注于石油压裂支撑剂与铸造用砂的研发生产，拥有多项实用新型专利。",
               tag: "油田用砂"
@@ -526,7 +470,7 @@ export const database = {
           {
             id: 6,
             name: "彰武奇想达新材料科技有限公司",
-            logo: "/image/secondary-29.jpeg",
+            logo: "./image/secondary-29.jpeg",
             front: {
               desc: "专业生产树脂覆膜支撑剂与节能环保覆膜砂，年产12万吨支撑剂、6万吨覆膜砂。（文档注明：无logo）",
               tag: "环保新材"
@@ -539,9 +483,9 @@ export const database = {
           }
         ],
         products: [
-          { name: "联信铸砂集团标识", price: "企业资料图", img: "/image/secondary-27.jpeg", link: "#" },
-          { name: "金莹集团标识", price: "企业资料图", img: "/image/secondary-28.jpeg", link: "#" },
-          { name: "昆仑隆源标识", price: "企业资料图", img: "/image/secondary-29.jpeg", link: "#" }
+          { name: "联信铸砂集团标识", price: "企业资料图", img: "./image/secondary-27.jpeg", link: "#" },
+          { name: "金莹集团标识", price: "企业资料图", img: "./image/secondary-28.jpeg", link: "#" },
+          { name: "昆仑隆源标识", price: "企业资料图", img: "./image/secondary-29.jpeg", link: "#" }
         ]
       },
       {
@@ -549,12 +493,12 @@ export const database = {
         title: "第三产业 · 电商物流文旅融合",
         subtitle: "E-Commerce · Logistics · Tourism",
         summary: "围绕“电商的主要模式、当地电商的发展历史、电商人才的培养”和“当地物流特色、乡镇物流配送体系”，彰武形成了电商、物流、旅游协同发展的服务业格局。",
-        img: "/image/tertiary-52.jpeg",
+        img: "./image/tertiary-52.jpeg",
         color: "orange",
         hero: {
           claim: "直播带货成主流，彰武地瓜成爆款，全网曝光超6000万次。",
           intro: "以县电商中心、物流共配中心和特色旅游景点为支点，打通农产品进城与文旅消费场景，形成“电商带货-物流履约-旅游引流-再销售”的闭环。",
-          images: ["/image/tertiary-33.jpeg", "/image/tertiary-42.jpeg", "/image/tertiary-50.jpeg"]
+          images: ["./image/tertiary-33.jpeg", "./image/tertiary-42.jpeg", "./image/tertiary-50.jpeg"]
         },
         stats: [
           { label: "累计培训", value: 113, unit: "场" },
@@ -641,13 +585,13 @@ export const database = {
             { label: "带动就业", value: 130, unit: "+" }
           ],
           images: [
-            "/image/tertiary-30.jpeg",
-            "/image/tertiary-31.jpeg",
-            "/image/tertiary-32.jpeg",
-            "/image/tertiary-33.jpeg",
-            "/image/tertiary-34.jpeg",
-            "/image/tertiary-35.jpeg",
-            "/image/tertiary-36.jpeg"
+            "./image/tertiary-30.jpeg",
+            "./image/tertiary-31.jpeg",
+            "./image/tertiary-32.jpeg",
+            "./image/tertiary-33.jpeg",
+            "./image/tertiary-34.jpeg",
+            "./image/tertiary-35.jpeg",
+            "./image/tertiary-36.jpeg"
           ]
         },
         logistics: {
@@ -720,13 +664,13 @@ export const database = {
             { label: "覆盖率", value: 76 }
           ],
           images: [
-            "/image/tertiary-37.jpeg",
-            "/image/tertiary-38.jpeg",
-            "/image/tertiary-39.jpeg",
-            "/image/tertiary-40.jpeg",
-            "/image/tertiary-41.jpeg",
-            "/image/tertiary-42.jpeg",
-            "/image/tertiary-43.jpeg"
+            "./image/tertiary-37.jpeg",
+            "./image/tertiary-38.jpeg",
+            "./image/tertiary-39.jpeg",
+            "./image/tertiary-40.jpeg",
+            "./image/tertiary-41.jpeg",
+            "./image/tertiary-42.jpeg",
+            "./image/tertiary-43.jpeg"
           ]
         },
         tourism: {
@@ -735,46 +679,42 @@ export const database = {
           spots: [
             {
               name: "章古台沙地国家森林公园",
-              studyId: "zhanggutai",
               subtitle: "中国治沙奇迹的见证",
               desc: "这里是东北唯一的国家沙地森林公园，也是中国第一片人工防风固沙林的诞生地。登上瞭望塔，可以亲眼看到“一边是沙漠，一边是森林”的奇特景观，感受几代人“绿锁黄龙”的艰辛与伟大。",
               experience: "在沙地与林海间穿行，体验沙漠越野、骑马，探访治沙纪念馆。",
               tags: ["森林公园", "治沙研学", "沙地体验"],
-              images: ["/image/tertiary-44.jpeg", "/image/tertiary-45.jpeg"]
+              images: ["./image/tertiary-44.jpeg", "./image/tertiary-45.jpeg"]
             },
             {
               name: "大青沟风景区",
-              studyId: "liuhe",
               subtitle: "沙海深处的“塞上江南”",
               desc: "地处科尔沁沙地南缘，是一条景色奇特的沙漠断裂峡谷。这里最令人称奇的是用粉沙修筑的水库大坝，堪称世界奇迹。沟内绿树成荫，水库水清鱼肥，与周围的沙地形成鲜明对比。",
               experience: "乘船游湖、品尝“沙泉鱼宴”、在硅沙浴场玩耍。",
               tags: ["峡谷湖泊", "生态观光", "亲水体验"],
-              images: ["/image/tertiary-46.jpeg", "/image/tertiary-47.jpeg"]
+              images: ["./image/tertiary-46.jpeg", "./image/tertiary-47.jpeg"]
             },
             {
               name: "德力格尔草原风景区",
-              studyId: "deliger",
               subtitle: "离海最近的辽西风牧场",
               desc: "这是国家4A级景区，也是一个集草原、森林、沙漠、蒙古风情于一体的综合性旅游区。草原上点缀着白色的蒙古包，还有霍比特人小镇、彩虹滑道等网红打卡点，适合各年龄段的游客。",
               experience: "骑马射箭、住蒙古包、参加篝火晚会、品尝烤全羊。",
               tags: ["草原风情", "蒙古包", "网红打卡"],
-              images: ["/image/tertiary-48.jpeg", "/image/tertiary-49.jpeg", "/image/tertiary-50.jpeg"]
+              images: ["./image/tertiary-48.jpeg", "./image/tertiary-49.jpeg", "./image/tertiary-50.jpeg"]
             },
             {
               name: "高山台省级森林公园",
-              studyId: "oulishan",
               subtitle: "俯瞰全城的“天然氧吧”",
               desc: "位于县城南侧，是离县城最近的森林公园，也是当地人休闲健身的好去处。山顶有古烽火台遗址，登高可以俯瞰整个彰武县城和柳河风光。这里植被茂密，空气清新，是名副其实的“天然氧吧”。",
               experience: "登山、散步、呼吸新鲜空气，俯瞰城市全景。",
               tags: ["城市近郊", "登山观景", "森林氧吧"],
-              images: ["/image/tertiary-51.jpeg", "/image/tertiary-52.jpeg"]
+              images: ["./image/tertiary-51.jpeg", "./image/tertiary-52.jpeg"]
             }
           ]
         },
         products: [
-          { name: "彰武电商公共服务中心", price: "文档配图", img: "/image/tertiary-35.jpeg", link: "#" },
-          { name: "彰武县物流共配中心", price: "文档配图", img: "/image/tertiary-42.jpeg", link: "#" },
-          { name: "德力格尔草原风景区", price: "文档配图", img: "/image/tertiary-50.jpeg", link: "#" }
+          { name: "彰武电商公共服务中心", price: "文档配图", img: "./image/tertiary-35.jpeg", link: "#" },
+          { name: "彰武县物流共配中心", price: "文档配图", img: "./image/tertiary-42.jpeg", link: "#" },
+          { name: "德力格尔草原风景区", price: "文档配图", img: "./image/tertiary-50.jpeg", link: "#" }
         ]
       },
     ],
@@ -792,35 +732,66 @@ export const database = {
       },
       // 2. 成员数据 (扩充到10人，建议找点帅气/漂亮的真实照片或者风景照代替)
       members: [
-        { id: 1, name: "王泽祥", role: "队长 / 统筹", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600", desc: "把舵定向，带领团队穿越风沙。" },
-        { id: 2, name: "刘畅", role: "技术负责人", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600", desc: "用代码构建数字绿洲。" },
-        { id: 3, name: "李子豪", role: "UI 设计", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600", desc: "描绘治沙精神的最美画卷。" },
-        { id: 4, name: "魏龙城", role: "文案策划", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600", desc: "用文字记录每一份感动。" },
-        { id: 5, name: "张圣铭", role: "摄影纪实", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600", desc: "定格光影中的绿色奇迹。" },
-        { id: 6, name: "刘腾予", role: "外联公关", img: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=600", desc: "连接校内外的沟通桥梁。" },
-        { id: 7, name: "冯才瑞", role: "调研组长", img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600", desc: "行走在沙地上的丈量者。" },
-        { id: 8, name: "焦冰和", role: "财务后勤", img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600", desc: "团队坚实的后盾保障。" },
-        { id: 9, name: "哈哈哈", role: "新媒体", img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=600", desc: "让治沙故事传得更远。" },
-        { id: 10, name: "小6猪", role: "数据分析", img: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=600", desc: "从数据中挖掘生态价值。" },
+        { id: 1, name: "王泽祥", role: "项目规划 / 网站搭建", img: "./image/wangzexiang.png", desc: "架构数字蓝图，用代码在瀚海中筑起绿洲。" },
+        { id: 2, name: "刘畅", role: "项目内容规划", img: "./image/liuchang.jpg", desc: "梳理治沙脉络，精心勾勒团队实践的整体框架。" },
+        { id: 3, name: "李子豪", role: "网站搭建", img: "./image/lizihao.jpg", desc: "编织前端视界，将大漠深处的感动完美呈现。" },
+        { id: 4, name: "魏龙城", role: "文案策划", img: "./image/weilongcheng.jpg", desc: "执笔书写传奇，用细腻文字传递守绿薪火。" },
+        { id: 5, name: "张圣铭", role: "摄影纪实", img: "./image/zhangshengming.jpg", desc: "定格沙海光影，用镜头记录新绿与岁月的交响。" },
+        { id: 6, name: "刘腾予", role: "网站搭建", img: "./image/liutengyu.jpg", desc: "打磨交互细节，以数字技术讲述厚重的生态故事。" },
+        { id: 7, name: "冯才瑞", role: "队长", img: "./image/fengcairui.jpg", desc: "把舵定向，带领团队迎着风沙坚定前行。" },
+        { id: 8, name: "焦冰和", role: "项目内容策划", img: "./image/jiaobinghe.jpg", desc: "深挖彰武底蕴，为治沙精神注入丰满的内容内核。" },
+        { id: 9, name: "刘笑彤", role: "新媒体", img: "./image/liuxiaotong.jpg", desc: "拓宽传播矩阵，让沙地变绿洲的故事传得更远。" },
+        { id: 10, name: "卢倩楠", role: "应急方案规划", img: "./image/luqiannan.jpg", desc: "严防实践风险，做全队最安心的坚实护盾。" },
+        { id: 11, name: "吕青原", role: "前期准备", img: "./image/luqingyuan.jpg", desc: "事无巨细地筹备，为团队的大漠之行铺就坦途。" },
+        { id: 12, name: "肖晴", role: "项目内容规划", img: "./image/xiaoqing.jpg", desc: "构思核心内容，确保每一次实地走访精准落地。" },
+        { id: 13, name: "伊冬妮", role: "文案策划", img: "./image/yidongni.jpg", desc: "字斟句酌，将七十载治沙史诗化作动人篇章。" },
+        { id: 14, name: "袁茉寒", role: "实践概述策划", img: "./image/yuanmohan.jpg", desc: "锚定实践意义，提炼出团队最核心的奋斗价值。" },
       ],
       // 3. 过往活动 (Events)
       activities: [
-        { date: "2024.07", title: "初识大漠", desc: "团队抵达彰武，参观治沙精神纪念馆，确立调研课题。", img: "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=600" },
-        { date: "2024.08", title: "深入林场", desc: "深入章古台林场，对话第一代治沙人，记录口述历史。", img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=600" },
-        { date: "2024.12", title: "成果汇报", desc: "完成社会实践报告，获得校级优秀团队称号。", img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600" },
+        { 
+          date: "2025.07", 
+          title: "初遇彰武 · 沙地出征", 
+          img: "./image/初遇彰武-2025-7.jpg" 
+        },
+        { 
+          date: "2025.07", 
+          title: "对话楷模 · 倾听历史", 
+          img: "./image/采访治沙人物-2025-7.jpg" 
+        },
+        { 
+          date: "2025.07", 
+          title: "专家座谈 · 科学求解", 
+          img: "./image/专家访谈会-2025-7.jpg" 
+        },
+        { 
+          date: "2025.12", 
+          title: "云端重逢 · 共赴冬约",
+          img: "./image/二期的前期准备-2026-12.jpg" 
+        },
+        { 
+          date: "2026.01", 
+          title: "治沙学堂 · 充电赋能", 
+          img: "./image/在治沙学校学习-2026-1.jpg" 
+        },
+        { 
+          date: "2026.01", 
+          title: "踏雪赴约 · 薪火相传",
+          img: "./image/二期结束-2026-1.jpg" 
+        }
       ]
     },
   tours: [
       {
         id: "zhanggutai",
         name: "章古台林场",
-        x: 66, y: 22,
+        x: 58, y: 25,
         type: "林海",
-        img: "/image/activity/spot-zhanggutai.jpg",
+        img: "./image/activity/spot-zhanggutai.jpg",
         gallery: [
-          "/image/activity/spot-zhanggutai.jpg",
-          "/image/activity/data-jpg-001.jpg",
-          "/image/activity/data-jpg-002.jpg"
+          "./image/activity/spot-zhanggutai.jpg",
+          "./image/activity/data-jpg-001.jpg",
+          "./image/activity/data-jpg-002.jpg"
         ],
         desc: "全国防沙治沙示范林场，治沙科技研学核心点位。",
         intro: "章古台林场始建于1958年，总面积8.01万亩，森林覆盖率从建场初期不足5%提升至87%，活立木蓄积量达17.6万立方米。林场下设塘坊、清泉、中窑、清沟4个管理工区，构建了“阻风-固沙-改良土壤”三阶生态链，成功阻断科尔沁沙地南侵。这里还建有30亩小型植物园，已成为阜新市彰武治沙学校现场教学点之一。",
@@ -834,13 +805,13 @@ export const database = {
       {
         id: "daleng",
         name: "大冷蒙古族镇",
-        x: 41, y: 34,
+        x: 43, y: 30,
         type: "草原",
-        img: "/image/activity/spot-daleng.jpg",
+        img: "./image/activity/spot-daleng.jpg",
         gallery: [
-          "/image/activity/spot-daleng.jpg",
-          "/image/activity/data-jpg-013.jpg",
-          "/image/activity/data-jpg-014.jpg"
+          "./image/activity/spot-daleng.jpg",
+          "./image/activity/data-jpg-013.jpg",
+          "./image/activity/data-jpg-014.jpg"
         ],
         desc: "草原生态恢复示范区，“沙窝子”变“鱼米乡”的典型点位。",
         intro: "大冷蒙古族镇是彰武县百万亩草原生态恢复工程核心区域。通过实施乔灌草综合治理，植被覆盖度由治理前不足20%提高到80%以上。柳河生态综合治理工程水田湿地项目在此实施，形成50余平方公里湿地，成为“以水含沙”模式的重要实践区域。",
@@ -854,13 +825,13 @@ export const database = {
       {
         id: "liuhe",
         name: "柳河湿地",
-        x: 30, y: 56,
+        x: 35, y: 52,
         type: "湿地",
-        img: "/image/activity/spot-liuhe.jpg",
+        img: "./image/activity/spot-liuhe.jpg",
         gallery: [
-          "/image/activity/spot-liuhe.jpg",
-          "/image/activity/data-jpg-017.jpg",
-          "/image/activity/data-jpg-018.jpg"
+          "./image/activity/spot-liuhe.jpg",
+          "./image/activity/data-jpg-017.jpg",
+          "./image/activity/data-jpg-018.jpg"
         ],
         desc: "“北方小黄河”治理样本，漠上湿地生态研学点。",
         intro: "柳河素有“北方小黄河”之称，全国河流含沙量排名第二。通过修建70余公里堤防生态带、建设5万亩水田湿地，形成“漠上湿地”景观。2025年“柳河鸿雁”观鸟季吸引摄影爱好者和游人约10万人次，是湿地生态观察与环境治理教学的重要点位。",
@@ -874,13 +845,13 @@ export const database = {
       {
         id: "oulishan",
         name: "欧李山观景台",
-        x: 54, y: 41,
+        x: 48, y: 48,
         type: "观景",
-        img: "/image/activity/spot-oulishan.jpg",
+        img: "./image/activity/spot-oulishan.jpg",
         gallery: [
-          "/image/activity/spot-oulishan.jpg",
-          "/image/activity/data-jpg-010.jpg",
-          "/image/activity/data-jpg-012.jpg"
+          "./image/activity/spot-oulishan.jpg",
+          "./image/activity/data-jpg-010.jpg",
+          "./image/activity/data-jpg-012.jpg"
         ],
         desc: "“一山观四湖”的漠上草原全景点。",
         intro: "欧李山观景台是“饱览绿色长城、传承治沙精神”精品研学路线的重要节点，可整体观察区域草原、林地与湿地的空间格局，帮助理解彰武生态修复由点到面的系统治理方式。",
@@ -893,13 +864,13 @@ export const database = {
       {
         id: "deliger",
         name: "德力格尔风景区",
-        x: 58, y: 30,
+        x: 50, y: 36,
         type: "文旅",
-        img: "/image/activity/spot-deliger.jpg",
+        img: "./image/activity/spot-deliger.jpg",
         gallery: [
-          "/image/activity/spot-deliger.jpg",
-          "/image/activity/data-jpg-015.jpg",
-          "/image/activity/data-jpg-016.jpg"
+          "./image/activity/spot-deliger.jpg",
+          "./image/activity/data-jpg-015.jpg",
+          "./image/activity/data-jpg-016.jpg"
         ],
         desc: "国家3A级景区，蒙古族文化体验与表演预约核心场景。",
         intro: "德力格尔风景区占地约4000亩，设有漠上营地、蒙古人家、皇家马场等景观，提供烤全羊、手把肉等蒙餐体验，并可承接安代舞、马头琴等民族文化表演活动，是研学团和旅游团进行文化体验与定制化演出的重要承接地。",
@@ -917,16 +888,16 @@ export const database = {
         title: "研学活动 · 探索之旅",
         subtitle: "Study Tour",
         summary: "围绕章古台林场、大冷蒙古族镇、柳河湿地、欧李山观景台与德力格尔风景区，构建“饱览绿色长城、传承治沙精神”精品路线。",
-        img: "/image/activity/study-hero.jpg",
+        img: "./image/activity/study-hero.jpg",
         color: "green",
         type: "interactive",
         gallery: [
-          "/image/activity/study-hero.jpg",
-          "/image/activity/spot-zhanggutai.jpg",
-          "/image/activity/spot-daleng.jpg",
-          "/image/activity/spot-liuhe.jpg",
-          "/image/activity/spot-oulishan.jpg",
-          "/image/activity/spot-deliger.jpg"
+          "./image/activity/study-hero.jpg",
+          "./image/activity/spot-zhanggutai.jpg",
+          "./image/activity/spot-daleng.jpg",
+          "./image/activity/spot-liuhe.jpg",
+          "./image/activity/spot-oulishan.jpg",
+          "./image/activity/spot-deliger.jpg"
         ]
       },
       {
@@ -934,14 +905,14 @@ export const database = {
         title: "一棵树 · 认养计划",
         subtitle: "Adopt A Tree Campaign",
         summary: "结合“辽宁营商林”和碳中和林实践，推动“认养一棵树、营造一片林”参与式治沙行动。",
-        img: "/image/activity/tree-hero.jpg",
+        img: "./image/activity/tree-hero.jpg",
         color: "green",
         gallery: [
-          "/image/activity/tree-hero.jpg",
-          "/image/activity/tree-gallery-1.jpg",
-          "/image/activity/tree-gallery-2.jpg",
-          "/image/activity/data-jpg-002.jpg",
-          "/image/activity/data-jpg-006.jpg"
+          "./image/activity/tree-hero.jpg",
+          "./image/activity/tree-gallery-1.jpg",
+          "./image/activity/tree-gallery-2.jpg",
+          "./image/activity/data-jpg-002.jpg",
+          "./image/activity/data-jpg-006.jpg"
         ],
         content: `
           <p>页面位置：彰武活动 → 一棵树活动。</p>
@@ -959,13 +930,13 @@ export const database = {
         title: "表演预约 · 民族风情",
         subtitle: "Cultural Performance Booking",
         summary: "依托蒙古勒津马头琴音乐、东蒙短调民歌等非遗资源，提供可定制民族表演预约服务。",
-        img: "/image/activity/show-hero.jpg",
+        img: "./image/activity/show-hero.jpg",
         color: "orange",
         gallery: [
-          "/image/activity/show-hero.jpg",
-          "/image/activity/show-gallery-1.jpg",
-          "/image/activity/show-gallery-2.jpg",
-          "/image/activity/data-jpg-015.jpg"
+          "./image/activity/show-hero.jpg",
+          "./image/activity/show-gallery-1.jpg",
+          "./image/activity/show-gallery-2.jpg",
+          "./image/activity/data-jpg-015.jpg"
         ],
         content: `
           <p>页面位置：彰武活动 → 表演预约。</p>
@@ -982,13 +953,13 @@ export const database = {
         title: "短视频大赛 · 影像彰武",
         subtitle: "Short Video Contest",
         summary: "围绕“治沙精神、生态美景、乡村振兴”三大主题，打造“印象彰武”短视频创作活动。",
-        img: "/image/activity/video-hero.jpg",
+        img: "./image/activity/video-hero.jpg",
         color: "blue",
         gallery: [
-          "/image/activity/video-hero.jpg",
-          "/image/activity/video-gallery-1.jpg",
-          "/image/activity/video-gallery-2.jpg",
-          "/image/activity/data-jpg-014.jpg"
+          "./image/activity/video-hero.jpg",
+          "./image/activity/video-gallery-1.jpg",
+          "./image/activity/video-gallery-2.jpg",
+          "./image/activity/data-jpg-014.jpg"
         ],
         content: `
           <p>页面位置：彰武活动 → 短视频大赛。</p>
