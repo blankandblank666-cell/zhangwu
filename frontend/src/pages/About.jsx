@@ -64,7 +64,7 @@ const About = () => {
                   {/* 旗帜图片容器 */}
                   <div className="w-[300px] h-[200px] md:w-[500px] md:h-[333px] bg-white rounded shadow-2xl overflow-hidden relative border-4 border-yellow-600/30 transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
                       {/* 这里放你们真实的旗帜图片，暂时用 Logo 代替 */}
-                      <img src="./team-flang.jpg" className="w-full h-full object-cover" alt="Team Flag" />
+                      <img src="/team-flang.jpg" className="w-full h-full object-cover" alt="Team Flag" />
                       
                       {/* 旗帜上的光泽感 */}
                       <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-white/10 pointer-events-none"></div>
