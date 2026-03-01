@@ -63,3 +63,67 @@ input[type=range]::-webkit-slider-thumb {
   input[type=range]:focus {
     outline: none;
   }
+
+/* =========================================
+   新增：治沙人物详情页 Z字型图文排版样式
+   ========================================= */
+
+/* Z字排版容器的基础样式 */
+.z-row {
+  display: flex;
+  align-items: center; /* 让图文垂直居中对齐 */
+  gap: 40px; /* 图片和文字之间的间距 */
+  margin-bottom: 50px; /* 每组图文之间的间距 */
+}
+
+/* 翻转样式：实现左文右图 */
+.z-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 图片区域样式 */
+.z-image {
+  flex: 1; /* 图片和文字各占 50% 宽度 */
+  display: flex;
+  flex-direction: column;
+}
+
+.z-image img {
+  width: 100%;
+  border-radius: 8px; /* 给图片加一点圆角，更现代 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 添加柔和的阴影 */
+  object-fit: cover;
+}
+
+/* 图片底部的灰色小字图注 */
+.img-caption {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  font-family: 'Noto Serif SC', serif; /* 继承你的哈佛风中文字体 */
+}
+
+/* 文字区域样式 */
+.z-text {
+  flex: 1;
+}
+
+.z-text p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: justify; /* 让文字两端对齐，版面更整齐 */
+}
+
+/* 手机端适配：屏幕变小时，全部变成上图下文 */
+@media (max-width: 768px) {
+  .z-row, .z-row.reverse {
+    flex-direction: column;
+    gap: 20px; /* 手机端减小图文间距 */
+  }
+  .z-image {
+    width: 100%; /* 手机端图片撑满 */
+  }
+}
